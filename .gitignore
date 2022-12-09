@@ -1,9 +1,6 @@
 ## Python
 
-.working
-working
-*.lock
-.pytask.sqlite3
+build
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
