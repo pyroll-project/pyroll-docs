@@ -21,17 +21,6 @@ depends on the loaded plugins.
     :members:
 ```
 
-## Hooks
-
-> To read about the basics of hooks and plugins, see [here](plugins.md).
-
-The following hooks are defined on plain profiles per default:
-
-```{eval-rst} 
-.. automodule:: pyroll.core.profile.hookspecs
-    :members:
-```
-
 ## Derived classes
 
 For the units types [`RollPass`](units.md#roll-passes) and [`Transport`](units.md#transports), specialized versions of

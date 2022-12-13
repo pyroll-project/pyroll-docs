@@ -38,13 +38,13 @@ Current basic implementations support CSV and XML formats by use of the methods 
 ## Class Documentation
 
 ```{eval-rst}
-.. autoclass:: pyroll.ui.exporter.Exporter
-    :members:
+.. autofunction:: pyroll.export.to_json
 ```
 
-## Hooks
+```{eval-rst}
+.. autofunction:: pyroll.export.to_dict
+```
 
 ```{eval-rst}
-.. automodule:: pyroll.ui.exporter.hookspecs
-    :members:
+.. autofunction:: pyroll.export.to_pandas
 ```

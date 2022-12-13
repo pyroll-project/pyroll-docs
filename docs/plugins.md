@@ -17,14 +17,26 @@ hold class attributes used to maintain plugins on that class, these are in detai
 This is implemented using the {py:class}`pyroll.plugin_host.PluginHost` class and the {py:class}`pyroll.plugin_host.PluginHostMeta` metaclass.
 
 ```{eval-rst}
-.. autoclass:: pyroll.core.plugin_host.PluginHostMeta
+.. autoclass:: pyroll.core.hooks.HookHostMeta
     :members:
 ```
 
 ```{eval-rst}
-.. autoclass:: pyroll.core.plugin_host.PluginHost
+.. autoclass:: pyroll.core.hooks.HookHost
     :members:
-    :special-members: __getattr__
+    :special-members: __cache__
+```
+
+```{eval-rst}
+.. autoclass:: pyroll.core.hooks.Hook
+    :members:
+    :special-members: __get__, __set__, __delete__
+```
+
+```{eval-rst}
+.. autoclass:: pyroll.core.hooks.HookFunction
+    :members:
+    :special-members: __call__
 ```
 
 The `hookspec` markers of all classes derived from [`Unit`](units.md) ([`RollPass`](units.md#roll-passes)

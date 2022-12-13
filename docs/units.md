@@ -59,35 +59,47 @@ The following are defined by default.
 #### `RollPass`
 
 ```{eval-rst} 
-.. automodule:: pyroll.core.roll_pass.hookspecs.roll_pass
+.. autoclass:: pyroll.core.RollPass
     :members:
+    :exclude-members: InProfile, OutProfile, Roll, Profile
 ```
 
 #### `Roll`
 
 ```{eval-rst} 
-.. automodule:: pyroll.core.roll.hookspecs
+.. autoclass:: pyroll.core.Roll
     :members:
 ```
 
 #### `RollPass.Roll`
 
 ```{eval-rst} 
-.. automodule:: pyroll.core.roll_pass.hookspecs.roll
+.. autoclass:: pyroll.core.RollPass.Roll
+    :show-inheritance:
     :members:
 ```
 
 #### `RollPass.Profile`
 
 ```{eval-rst} 
-.. automodule:: pyroll.core.roll_pass.hookspecs.profile
+.. autoclass:: pyroll.core.RollPass.Profile
+    :show-inheritance:
+    :members:
+```
+
+#### `RollPass.InProfile`
+
+```{eval-rst} 
+.. autoclass:: pyroll.core.RollPass.InProfile
+    :show-inheritance:
     :members:
 ```
 
 #### `RollPass.OutProfile`
 
 ```{eval-rst} 
-.. automodule:: pyroll.core.roll_pass.hookspecs.out_profile
+.. autoclass:: pyroll.core.RollPass.OutProfile
+    :show-inheritance:
     :members:
 ```
 
@@ -127,13 +139,31 @@ The following hooks are defined by default.
 #### `Transport`
 
 ```{eval-rst} 
-.. automodule:: pyroll.core.transport.hookspecs.transport
+.. autoclass:: pyroll.core.Transport
+    :members:
+    :exclude-members: InProfile, OutProfile, Profile
+```
+
+#### `Transport.Profile`
+
+```{eval-rst} 
+.. autoclass:: pyroll.core.Transport.Profile
+    :show-inheritance:
+    :members:
+```
+
+#### `Transport.InProfile`
+
+```{eval-rst} 
+.. autoclass:: pyroll.core.Transport.InProfile
+    :show-inheritance:
     :members:
 ```
 
 #### `Transport.OutProfile`
 
 ```{eval-rst} 
-.. automodule:: pyroll.core.transport.hookspecs.out_profile
+.. autoclass:: pyroll.core.Transport.OutProfile
+    :show-inheritance:
     :members:
 ```

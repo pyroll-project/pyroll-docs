@@ -24,13 +24,5 @@ instance of matplotlib's `Figure` class.
 ## Class Documentation
 
 ```{eval-rst}
-.. autoclass:: pyroll.ui.reporter.Reporter
-    :members:
-```
-
-## Hooks
-
-```{eval-rst}
-.. automodule:: pyroll.ui.reporter.hookspecs
-    :members:
+.. autofunction:: pyroll.report.report
 ```
