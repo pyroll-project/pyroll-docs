@@ -36,10 +36,6 @@ pytest = "^7.0.0"
 ipython = "^8.3.0"
 schemdraw = "^0.15"
 pytask = "^0.2.5"
-pyroll-core = { git = "ssh://git@github.com/pyroll-project/pyroll-core.git", branch = "remove_ui" }
-pyroll-report = { git = "ssh://git@github.com/pyroll-project/pyroll-report.git", branch = "main" }
-pyroll-export = { git = "ssh://git@github.com/pyroll-project/pyroll-export.git", branch = "main" }
-pyroll-cli = { git = "ssh://git@github.com/pyroll-project/pyroll-cli.git", branch = "main" }
 
 [tool.poetry.scripts]
 pyroll = 'pyroll.ui.cli:main'
