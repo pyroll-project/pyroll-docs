@@ -75,3 +75,7 @@ intersphinx_mapping = {
 
 # Autodoc
 autodoc_member_order = "groupwise"
+
+autodoc_type_aliases = {
+    "pyroll.core.hooks.HookFunction": "pyroll.core.HookFunction"
+}

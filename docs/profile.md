@@ -1,6 +1,6 @@
 # The Concept of Profiles
 
-```{py:currentmodule} pyroll.core.profile
+```{py:currentmodule} pyroll.core
 ```
 
 Think of a {py:class}`Profile` object as of a state of the workpiece anywhere in the pass sequence. Every sequence unit

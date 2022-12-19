@@ -1,65 +1,84 @@
 # The Plugin System
 
-PyRolL is mainly built on the plugin system [pluggy](https://pluggy.readthedocs.io), which is also used in well known
-projects like [pytest](https://docs.pytest.org) and [pytask](https://pytask-dev.readthedocs.io). Many core
-functionalities are also implemented as plugins. The PyRolL Core project only implements a minimal set of model
-approaches, look into the various official and unofficial plugins available for more.
+```{py:currentmodule} pyroll.core
+```
 
-Unlike the other mentioned projects, PyRolL has not only one plugin system, but several. Many main classes of PyRolL
-hold class attributes used to maintain plugins on that class, these are in detail:
+```{note}
+The plugin system has drastically changed in Version 2.0.
+For the old version see [here](https://pyroll.readthedocs.io/en/v1/plugins.html).
+```
 
-| Attribute        | Description                                                                                                                                           |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `plugin_manager` | A {py:class}`pluggy.PluginManager` instance used to maintain the plugins on this class.                                                               |
-| `hookspec`       | A wrapper around a {py:class}`pluggy.HookspecMarker` instance for defining new hook specifications. Supports only a subset of the original arguments. |
-| `hookimpl`       | A wrapper around a {py:class}`pluggy.HookimplMarker` instance for defining new hook implementations.                                                  |
+Plugin packages are mainly meant to provided model logic to PyRolL, which does only ship with most basic relations at its core.
+Simulating rolling processes is only possible by using plugin packages, without, PyRolL runs, of course, but the results are extremely rough estimations.
+Plugins for PyRolL work through hooks.
 
-This is implemented using the {py:class}`pyroll.plugin_host.PluginHost` class and the {py:class}`pyroll.plugin_host.PluginHostMeta` metaclass.
+A hook is a attribute of a class resp. an object, whose value can be explicitly set or computed from a set of functions.
+A plugin can supply functions to hooks to represent a physical model approach.
+The user, however, can always override the function logic by defining a value on the object itself by classic attribute syntax.
+
+Let's give an example for clarification.
+
+The {py:class}`.Profile` class defines the hook {py:attr}`.Profile.flow_stress`, which represents the flow stress of the profile's material.
+
+```python
+
+class Profile(HookHost):
+    ...
+    flow_stress = Hook[float]()
+    ...
+```
+
+Classes using hooks have to be derived from {py:class}`HookHost`.
+The {py:class}`Hook` instance is a descriptor providing logic and storage for a hooks value and functions.
+It can be used as decorator for defining a function.
+
+```python
+@Profile.flow_stress
+def flow_stress1(self: Profile):
+    return 2 * self.strain
+```
+
+This function is now registered for calculating flow stresses of all profiles, if no explicit value is set.
+The functions must have classic method signature, so the `self` argument always refers to the actual object instance.
+The functions registered are evaluated in reverse order of their registration, so the last registered is the first executed.
+The first result other than `None` is taken as the hook's actual value.
+The value is cached until the cache is cleared using the {py:meth}`HookHost.clear_hook_cache` method.
+
+The user may override hook function evaluation totally by setting an explicit value at object creation...
+
+```python
+profile = Profile.round(
+    ...,
+    flow_stress=100e6,
+    ...,
+)
+```
+
+...or later using attribute syntax.
+
+```python
+profile.flow_stress = 100e6
+```
 
 ```{eval-rst}
-.. autoclass:: pyroll.core.hooks.HookHostMeta
+.. autoclass:: HookHostMeta
     :members:
 ```
 
 ```{eval-rst}
-.. autoclass:: pyroll.core.hooks.HookHost
+.. autoclass:: HookHost
     :members:
     :special-members: __cache__
 ```
 
 ```{eval-rst}
-.. autoclass:: pyroll.core.hooks.Hook
+.. autoclass:: Hook
     :members:
     :special-members: __get__, __set__, __delete__
 ```
 
 ```{eval-rst}
-.. autoclass:: pyroll.core.hooks.HookFunction
+.. autoclass:: HookFunction
     :members:
     :special-members: __call__
 ```
-
-The `hookspec` markers of all classes derived from [`Unit`](units.md) ([`RollPass`](units.md#roll-passes)
-and [`Transport`](units.md#transports)) and [`Profile`](profile.md) are preconfigured
-as [`firstresult`](https://pluggy.readthedocs.io/en/stable/#first-result-only). That means, that the first hook
-implementation, that returns not `None` is used as only result of the hook call. This offers the possibility of
-implementing many specialized versions of a hook and fall back to general ones if no special one applies.
-
-Almost every attribute on the mentioned classes can be represented by a hook. This is achieved by
-overriding `__getattr__`, so that if no attribute with a desired name is present on an object, the framework searches
-for a hook of equal name. If there is no such hook, or the hook call results in `None`, an error is raised. Therefore,
-it is easy to specify new hooks, just use the `hookspec` marker on a dummy function and add it to the `plugin_manager`
-by use of `plugin_manager.add_hookspecs()`. It is common in writing plugins for PyRolL to specify hooks for all
-intermediate and result values on profiles and units you want to calculate, and then to provide at least one general
-implementation of them. Afterwards you can proceed providing more specialized implementations in the same plugin
-package, or maybe also in another one if you need more flexibility in loading different implementations.
-
-The classes [`Reporter`](report.md) and [`Exporter`](export.md) are also maintaining a plugin system, to allow plugins to
-contribute their own results to the output. But those hooks are
-not [`firstresult`](https://pluggy.readthedocs.io/en/stable/#first-result-only) per default and specifying new hooks is
-not as easy as with units and profiles.
-
-Details affecting only the distinct classes are described in their documentation.
-
-For examples on specifying and implementing hooks, please read the [pluggy documentation](https://pluggy.readthedocs.io)
-and look into the source code of PyRolL.
