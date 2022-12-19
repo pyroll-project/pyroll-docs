@@ -6,9 +6,11 @@ They have to be distinguished from extensions, which provide extended functional
 In the following available plugin packages for PyRolL will be listed.
 The list will be extended continuously.
 
+```{note}
+Read [here](../core/plugins) for details on hooks and plugins.
+```
+
 ## Official Plugin Packages
-
-
 
 {% for p in official | sort(attribute="name") %} 
 

@@ -11,6 +11,8 @@ and extend the model set available to describe the process.
 core/index
 extensions/index
 plugins/index
+basic/index
+recommendations
 ```
 
 ## Installation

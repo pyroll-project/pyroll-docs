@@ -23,3 +23,8 @@ instance of matplotlib's `Figure` class.
 ```{eval-rst}
 .. autofunction:: pyroll.report.report
 ```
+
+## Command Line Usage
+
+If the `pyroll-cli` package is also installed, the `pyroll-report` package provide an additional CLI command `report`, which can be used to generate the report page and save it to a file.
+The file can be specified by the `-f`/`--file` option, which defaults to `./report.html`.
