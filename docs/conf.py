@@ -3,6 +3,10 @@
 # This file only contains a selection of the most common options. For a full
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+import json
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).parent
 
 # -- Path setup --------------------------------------------------------------
 
@@ -54,7 +58,7 @@ html_logo = "img/pyroll-bird.svg"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 # MyST
 myst_heading_anchors = 3
@@ -79,3 +83,29 @@ autodoc_member_order = "groupwise"
 autodoc_type_aliases = {
     "pyroll.core.hooks.HookFunction": "pyroll.core.HookFunction"
 }
+
+# Jinja
+
+jinja_contexts = {
+    "plugins/index": json.loads((ROOT_DIR / "plugins" / "plugins.json").read_text()),
+    "extensions/index": json.loads((ROOT_DIR / "extensions" / "extensions.json").read_text())
+}
+
+
+def rstjinja(app, docname, source):
+    """
+    Render our pages as a jinja template for fancy templating goodness.
+    """
+    # Make sure we're outputting HTML
+    if app.builder.format != 'html':
+        return
+    src = source[0]
+    rendered = app.builder.templates.render_string(
+        src, app.config.jinja_contexts.get(docname, {})
+    )
+    source[0] = rendered
+
+
+def setup(app):
+    app.add_config_value('jinja_contexts', {}, 'html')
+    app.connect("source-read", rstjinja)

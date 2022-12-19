@@ -10,7 +10,7 @@ toc: true
 All elongation grooves can be traced back to a generalized elongation groove consisting of two straights and four radii.
 The geometry of this is shown below.
 
-![Geometry of Generalized Groove](img/general-groove.svg)
+![Geometry of Generalized Groove](../img/general-groove.svg)
 
 All geometric key values like cross-sections and perimeters can be calculated on this generalized groove. The
 generalized groove is implemented in the `GrooveBase` class, all special groove types are derived from that.
@@ -61,7 +61,7 @@ depends on the roll gap.
 The `BoxGroove` class represents a rectangular shaped groove as shown in the figure. For wear reasons, the flanks a
 typically inclined by a small angle.
 
-![box groove geometry](img/box.svg)
+![box groove geometry](../img/box.svg)
 
 Mandatory measures of the box groove are the two radii $r_1$ and $r_2$, as well as the depth $d$. To constrain
 geometry fully, any two of the following must be given:
@@ -86,7 +86,7 @@ So the overall geometry remains the same if one modifies only the radii.
 The `ConstrictedBoxGroove` class represents a [`BoxGroove`](box.md) but with an indent in the ground as shown in the
 figure.
 
-![constricted box groove geometry](img/constricted_box.svg)
+![constricted box groove geometry](../img/constricted_box.svg)
 
 Mandatory measures of the box groove are the two radii $r_1$ and $r_2$, as well as the depth $d$ and the indent
 $i$. To constrain geometry fully, any two of the following must be given:
@@ -109,7 +109,7 @@ $r_3$ and $r_4$ are considered to be zero.
 
 The `DiamondGroove` class represents a rhombus shaped groove as shown in the figure.
 
-![diamond groove geometry](img/diamond.svg)
+![diamond groove geometry](../img/diamond.svg)
 
 Mandatory measures of this groove are the two radii $r_1$ and $r_2$. To constrain geometry fully, any two of the
 following must be given:
@@ -135,7 +135,7 @@ the diagonal of the rhombus with sharp corners.
 
 The `SquareGroove` class represents a square shaped groove as shown in the figure.
 
-![square groove geometry](img/square.svg)
+![square groove geometry](../img/square.svg)
 
 Mandatory measures of this groove are the two radii $r_1$ and $r_2$. To constrain geometry fully, any two of the
 following must be given:
@@ -166,7 +166,7 @@ a [`DiamondGroove`](#the-diamondgroove-class) instead.
 
 The `RoundGroove` class represents a groove with a circular cross-section as shown in the figure.
 
-![round groove geometry](img/round.svg)
+![round groove geometry](../img/round.svg)
 
 It is defined by two radii $r_1$ and $r_2$ and the depth $d$, so the constructor has the following signature:
 
@@ -191,7 +191,7 @@ $$
 The `FalseRoundGroove` class represents a groove with a roughly circular cross-section, which shows a small straight
 flank, as shown in the figure.
 
-![false round groove geometry](img/false_round.svg)
+![false round groove geometry](../img/false_round.svg)
 
 It is defined by two radii $r_1$ and $r_2$, the depth $d$ and the flank angle $\alpha_1$ , so the constructor has the
 following signature:
@@ -212,7 +212,7 @@ $$ b_\mathrm{kn} = 2 \frac{d + \frac{r_2}{\cos \alpha_1} - r_2}{\tan \alpha_1} $
 
 The `CircularOvalGroove` class represents an oval shaped groove consisting of two radii as shown in the figure.
 
-![circular oval groove geometry](img/circular_oval.svg)
+![circular oval groove geometry](../img/circular_oval.svg)
 
 It is defined by two radii $r_1$ and $r_2$ and the depth $d$, so the constructor has the following signature:
 
@@ -231,7 +231,7 @@ $.
 The `FlatOvalGroove` class represents an oval shaped groove consisting of two radii and an even ground as shown in the
 figure.
 
-![flat oval groove geometry](img/flat_oval.svg)
+![flat oval groove geometry](../img/flat_oval.svg)
 
 Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as the depth $d$ and the usable width $b_
 \mathrm{kn}$.
@@ -251,7 +251,7 @@ used for this type of groove, but can be confused with regular hexagon shaped gr
 used as an oval and therefore the term swedish oval should be used, which is derived from its origin in swedish steel
 plants.
 
-![swedish oval groove geometry](img/swedish_oval.svg)
+![swedish oval groove geometry](../img/swedish_oval.svg)
 
 Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as the depth $d$. To constrain
 geometry fully, any two of the following must be given:
@@ -279,7 +279,7 @@ and the groove is less deep.
 The `ConstrictedSwedishOvalGroove` class represents a [`SwedishOvalGroove`](swedish_oval.md) but with an indent in the
 ground as shown in the figure.
 
-![constricted swedish oval groove geometry](img/constricted_swedish_oval.svg)
+![constricted swedish oval groove geometry](../img/constricted_swedish_oval.svg)
 
 Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as the depth $d$ and the indent $`i`
 $. To constrain geometry fully, any two of the following must be given:
@@ -300,7 +300,7 @@ $r_3$ and $r_4$ are considered to be zero.
 
 The `Oval3RadiiGroove` class represents an oval shaped groove consisting of three radii as shown in the figure.
 
-![3 radii oval groove geometry](img/oval_3radii.svg)
+![3 radii oval groove geometry](../img/oval_3radii.svg)
 
 Mandatory measures of this groove are the three radii $r_1$, $r_2$ and $r_3$, as well as the depth $d$ and the
 usable width $b_\mathrm{kn}$.
@@ -318,7 +318,7 @@ $r_4$ and $b_d'$ are considered to be zero.
 The `Oval3RadiiFlankedGroove` class represents an oval shaped groove consisting of three radii and a small straight
 flank as shown in the figure.
 
-![3 radii flanked oval groove geometry](img/oval_3radii_flanked.svg)
+![3 radii flanked oval groove geometry](../img/oval_3radii_flanked.svg)
 
 Mandatory measures of this groove are the three radii $r_1$, $r_2$ and $r_3$, as well as the depth $d$, the
 usable width $b_\mathrm{kn}$ and the flank angle $\alpha_1$.

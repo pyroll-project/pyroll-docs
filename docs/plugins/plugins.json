@@ -1,0 +1,13 @@
+{
+  "official": [
+    {
+      "name": "pyroll-wusatowski-spreading",
+      "docs": "https://github.com/pyroll-project/pyroll-wusatowski-spreading/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-wusatowski-spreading",
+      "pypi": "https://pypi.org/project/pyroll-wusatowski-spreading",
+      "description": "Provides Wusatowski's spreading model."
+    }
+  ],
+  "unofficial": [
+  ]
+}

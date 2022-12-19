@@ -140,8 +140,8 @@ the [`input-py`](#input-py) command must define at least two variables:
 
 | Variable     | Description                                                                                                                                        |
 |--------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| `in_profile` | A [`Profile`](profile.md) object defining the properties of the incoming workpiece.                                                                |
-| `sequence`   | A list of [`Unit`](units.md) objects (either [`RollPass`](units.md#roll-passes) or [`Transport`](units.md#transports)) defining the pass sequence. |
+| `in_profile` | A [`Profile`](../core/profile.md) object defining the properties of the incoming workpiece.                                                                |
+| `sequence`   | A list of [`Unit`](../core/units.md) objects (either [`RollPass`](../core/units.md#roll-passes) or [`Transport`](../core/units.md#transports)) defining the pass sequence. |
 
 A minimal input script is shown below:
 
@@ -193,4 +193,4 @@ sequence = [
 
 The attributes to give as keyword arguments to the constructors depend on the plugins loaded. Most plugins need
 additional data about the pass sequence or the incoming profile. For information on the basic data needed see the docs
-of [Profile](profile.md), [RollPass](units.md#roll-passes) and [Transport](units.md#transports).
+of [Profile](../core/profile.md), [RollPass](../core/units.md#roll-passes) and [Transport](../core/units.md#transports).

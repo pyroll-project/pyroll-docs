@@ -52,7 +52,7 @@ also specify new ones.
 
 The figure below shows an overview over the respective classes and their hook function signature.
 
-![Classes Connected to Roll Passes and Their Hook Signatures](img/uml_roll_pass.svg)
+![Classes Connected to Roll Passes and Their Hook Signatures](../img/uml_roll_pass.svg)
 
 The following are defined by default.
 
@@ -132,7 +132,7 @@ also specify new ones.
 
 The figure below shows an overview over the respective classes and their hook function signature.
 
-![Classes Connected to Transports and Their Hook Signatures](img/uml_transport.svg)
+![Classes Connected to Transports and Their Hook Signatures](../img/uml_transport.svg)
 
 The following hooks are defined by default.
 

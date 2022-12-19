@@ -6,7 +6,7 @@ by use of the CLI through the [`export`](cli.md#export) command.
 
 The data included in the frame can be modified by hooks. The available file formats can be extended by the use of hooks.
 
-> To read about the basics of hooks and plugins, see [here](plugins.md).
+> To read about the basics of hooks and plugins, see [here](../core/plugins.md).
 
 ## Specifying data to include
 

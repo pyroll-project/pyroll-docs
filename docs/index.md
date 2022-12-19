@@ -6,15 +6,11 @@ a first estimation of forces and torques occurring in a pass sequence. There is 
 and extend the model set available to describe the process.
 
 ```{toctree}
-   :maxdepth: 2
+:maxdepth: 2
    
-cli
-grooves
-profile
-units
-report
-export
-plugins
+core/index
+extensions/index
+plugins/index
 ```
 
 ## Installation
@@ -102,7 +98,7 @@ Here one can specify a list of plugins that will be loaded in each simulation ru
 Another way of loading plugins is to directly import them in the input Python script.
 
 It is recommended to create a fresh directory for each simulation project to avoid the need to specify the filenames explicitly.
-A basic input and config file can be created in the current directory using 
+A basic input and config file can be created in the current directory using
 
 ```shell
 pyroll new

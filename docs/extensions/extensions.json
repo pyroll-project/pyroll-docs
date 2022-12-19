@@ -1,0 +1,27 @@
+{
+  "official": [
+    {
+      "name": "pyroll-cli",
+      "docs": "cli",
+      "source": "https://github.com/pyroll-project/pyroll-cli",
+      "pypi": "https://pypi.org/project/pyroll-cli",
+      "description": "Provides a command line interface to PyRolL."
+    },
+    {
+      "name": "pyroll-report",
+      "docs": "report",
+      "source": "https://github.com/pyroll-project/pyroll-report",
+      "pypi": "https://pypi.org/project/pyroll-report",
+      "description": "Provides a routine to generate an extensible HTML report page displaying the simulation results. Integrates with `pyroll-cli` if installed."
+    },
+    {
+      "name": "pyroll-export",
+      "docs": "export",
+      "source": "https://github.com/pyroll-project/pyroll-export",
+      "pypi": "https://pypi.org/project/pyroll-export",
+      "description": "Provides several routines to export the data within PyRolL data structures to other well known formats, such as pandas DataFrame, Python dicts, CSV and XML. Integrates with `pyroll-cli` if installed."
+    }
+  ],
+  "unofficial": [
+  ]
+}
