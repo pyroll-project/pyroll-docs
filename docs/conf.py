@@ -76,7 +76,8 @@ autoclass_content = "both"
 
 # InterSphinx
 intersphinx_mapping = {
-    "pluggy": ("https://pluggy.readthedocs.io/en/stable", None)
+    "pluggy": ("https://pluggy.readthedocs.io/en/stable", None),
+    "pandas": ("https://pandas.pydata.org/docs/", None)
 }
 
 # Autodoc
