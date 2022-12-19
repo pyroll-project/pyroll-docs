@@ -5,6 +5,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 import json
 from pathlib import Path
+import sphinx_rtd_theme
 
 ROOT_DIR = Path(__file__).parent
 
@@ -37,6 +38,7 @@ extensions = [
     "myst_parser",
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
+    "sphinx_rtd_theme",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -52,7 +54,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 html_logo = "img/pyroll-bird.svg"
 
 # Add any paths that contain custom static files (such as style sheets) here,
