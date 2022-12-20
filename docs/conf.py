@@ -24,10 +24,10 @@ ROOT_DIR = Path(__file__).parent
 
 project = 'PyRolL'
 copyright = '2022, The PyRolL Project'
-author = 'Max Weiner'
+author = 'Max Weiner, Christoph Renzing, Matthias Schmidtchen'
 
 # The full version, including alpha/beta/rc tags
-release = '1.0.0'
+release = '2.0.0a'
 
 # -- General configuration ---------------------------------------------------
 
@@ -55,7 +55,14 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-html_logo = "img/pyroll-bird.svg"
+html_logo = "img/pyroll-bird-head.svg"
+html_theme_options = {
+    'logo_only': True,
+    'display_version': True,
+    'style_nav_header_background': '#343131',
+    # Toc options
+    'navigation_depth': -1,
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -84,10 +91,6 @@ intersphinx_mapping = {
 
 # Autodoc
 autodoc_member_order = "groupwise"
-
-autodoc_type_aliases = {
-    "pyroll.core.hooks.HookFunction": "pyroll.core.HookFunction"
-}
 
 # Jinja
 
