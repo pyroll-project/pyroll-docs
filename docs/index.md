@@ -15,6 +15,8 @@ extensions/index
 plugins/index
 basic/index
 recommendations
+examples/index
+troubleshooting
 ```
 
 ## Installation

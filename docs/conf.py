@@ -74,7 +74,9 @@ myst_heading_anchors = 3
 myst_title_to_header = True
 myst_enable_extensions = [
     "dollarmath",
-    "fieldlist"
+    "fieldlist",
+    "smartquotes",
+    "replacements",
 ]
 
 # AutoDoc
@@ -87,7 +89,8 @@ intersphinx_mapping = {
     "pluggy": ("https://pluggy.readthedocs.io/en/stable", None),
     "pandas": ("https://pandas.pydata.org/docs/", None),
     "maplotlib": ("https://matplotlib.org/stable/", None),
-    "shapely": ("https://shapely.readthedocs.io/en/stable/", None)
+    "shapely": ("https://shapely.readthedocs.io/en/stable/", None),
+    "numpy": ("https://numpy.org/doc/stable/", None),
 }
 
 # Autodoc
