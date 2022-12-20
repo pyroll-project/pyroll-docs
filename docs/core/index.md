@@ -22,6 +22,7 @@ Make sure you understand the core concepts of PyRolL before reading into the mat
 
 ```{toctree}
 :maxdepth: 2
+assumptions
 profiles
 units/index
 plugins
