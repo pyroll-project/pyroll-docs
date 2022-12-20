@@ -61,24 +61,19 @@ profile.flow_stress = 100e6
 ```
 
 ```{eval-rst}
-.. autoclass:: HookHostMeta
-    :members:
-```
-
-```{eval-rst}
-.. autoclass:: HookHost
-    :members:
-    :special-members: __cache__
-```
-
-```{eval-rst}
 .. autoclass:: Hook
     :members:
-    :special-members: __get__, __set__, __delete__
+    :special-members: __get__, __set__, __delete__, __call__
 ```
 
 ```{eval-rst}
 .. autoclass:: HookFunction
     :members:
     :special-members: __call__
+```
+
+```{eval-rst}
+.. autoclass:: HookHost
+    :members:
+    :special-members: __cache__
 ```

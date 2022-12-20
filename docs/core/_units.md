@@ -156,6 +156,7 @@ The following hooks are defined by default.
 
 ```{eval-rst} 
 .. autoclass:: pyroll.core.Transport.InProfile
+
     :show-inheritance:
     :members:
 ```

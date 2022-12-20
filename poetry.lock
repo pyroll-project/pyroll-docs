@@ -630,7 +630,7 @@ PyYAML = ">=6.0,<7.0"
 
 [[package]]
 name = "pyroll-core"
-version = "2.0.0a2"
+version = "2.0.0a3"
 description = "PyRoll rolling simulation framework - core library."
 category = "main"
 optional = false
@@ -1668,8 +1668,8 @@ pyroll-cli = [
     {file = "pyroll_cli-2.0.0a1.tar.gz", hash = "sha256:2e877a7cc0593c80f33c492af35a7529864237b1ec120e1b27890d99e4365d32"},
 ]
 pyroll-core = [
-    {file = "pyroll_core-2.0.0a2-py3-none-any.whl", hash = "sha256:257f2cf8eee08951f73039d9e2b1b664bb951cf304df0ae1080894ac326e681d"},
-    {file = "pyroll_core-2.0.0a2.tar.gz", hash = "sha256:df11cf55e0ff807aec9a57fc3e242da4518cfb5505406c499a7d3cd7e19cf7b3"},
+    {file = "pyroll_core-2.0.0a3-py3-none-any.whl", hash = "sha256:db81c7aad75634d97b50071dfeddcf31f004c2a1f5af43fe9380bf72cb87f851"},
+    {file = "pyroll_core-2.0.0a3.tar.gz", hash = "sha256:16cd2feb366631b318e3a7bf39a27fe5a7e130ad0b5770c9c2675da1d29b9982"},
 ]
 pyroll-export = [
     {file = "pyroll_export-2.0.0a1-py3-none-any.whl", hash = "sha256:0490aa732bbbc6f16f820b22e24b7a0fc1a28726038b90b3a5518d16cda68c79"},
