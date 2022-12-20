@@ -66,7 +66,8 @@ html_logo = "img/pyroll-bird.svg"
 myst_heading_anchors = 3
 myst_title_to_header = True
 myst_enable_extensions = [
-    "dollarmath"
+    "dollarmath",
+    "fieldlist"
 ]
 
 # AutoDoc
@@ -77,7 +78,8 @@ autoclass_content = "both"
 # InterSphinx
 intersphinx_mapping = {
     "pluggy": ("https://pluggy.readthedocs.io/en/stable", None),
-    "pandas": ("https://pandas.pydata.org/docs/", None)
+    "pandas": ("https://pandas.pydata.org/docs/", None),
+    "maplotlib": ("https://matplotlib.org/stable/", None)
 }
 
 # Autodoc
