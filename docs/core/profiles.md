@@ -8,6 +8,9 @@ has an incoming and an outgoing profile. Also, you must provide a profile as def
 processed in the pass sequence.
 
 The shape and the extent of the profile is defined by its {py:attr}`Profile.cross_section` hook.
+The value type of this hook is a {py:class}`shapely.Polygon` providing all of its functionality in planar geometry.
+PyRolL patches a few things within shapely for convenience and user experience, especially while developing plugins.
+Other parts of PyRolL use shapely geometry objects, too.
 
 For creating an initial profile, several class methods exist in the {py:class}`Profile` class. One can either derive the
 profile shape from an existing groove object by use of the {py:meth}`Profile.from_groove` method, or created some

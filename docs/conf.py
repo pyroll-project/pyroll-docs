@@ -86,7 +86,8 @@ autoclass_content = "both"
 intersphinx_mapping = {
     "pluggy": ("https://pluggy.readthedocs.io/en/stable", None),
     "pandas": ("https://pandas.pydata.org/docs/", None),
-    "maplotlib": ("https://matplotlib.org/stable/", None)
+    "maplotlib": ("https://matplotlib.org/stable/", None),
+    "shapely": ("https://shapely.readthedocs.io/en/stable/", None)
 }
 
 # Autodoc
