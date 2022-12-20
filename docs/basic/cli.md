@@ -37,10 +37,10 @@ the [Institute of Metals Forming](https://tu-freiberg.de/en/fakult5/imf).
 
 ### `new`
 
-Creates a new PyRolL simulation project in the directory specified by `-d/--dir`. 
+Creates a new PyRolL simulation project in the directory specified by `-d/--dir`.
 The directory will be created if not already existing.
 Creates a `config.yaml` and an `input.py` in the specified directory.
-This command is basically a shortcut for 
+This command is basically a shortcut for
 
     pyroll -c <dir>/config.yaml create-config -p -f <dir>/config.yaml create-input-py -k min -f <dir>/input.py 
 
@@ -134,59 +134,59 @@ the `INFO` specifiers with `DEBUG`. To avoid log pollution by the `matplotlib` p
 The most flexible way of defining input for PyRolL is the direct use of a python script. A script loadable by
 the [`input-py`](#input-py) command must define at least two variables:
 
-| Variable     | Description                                                                                                                                        |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| `in_profile` | A [`Profile`](../core/profile.md) object defining the properties of the incoming workpiece.                                                                |
-| `sequence`   | A list of [`Unit`](../core/units.md) objects (either [`RollPass`](../core/units.md#roll-passes) or [`Transport`](../core/units.md#transports)) defining the pass sequence. |
+| Variable     | Description                                                                                  |
+|--------------|----------------------------------------------------------------------------------------------|
+| `in_profile` | An instance of {py:class}`Profile` object defining the properties of the incoming workpiece. |
+| `sequence`   | An instance of {py:class}`PassSequence` defining the processing steps.                       |
 
 A minimal input script is shown below:
 
 ```python
-from pyroll.core.grooves import SquareGroove, DiamondGroove
-from pyroll.core import Profile
-from pyroll.core import RollPass
-from numpy import pi
+from pyroll.core import Profile, Roll, RollPass, Transport, RoundGroove, CircularOvalGroove, PassSequence
 
 # initial profile
-in_profile = Profile(
-    width=68e-3,
-    height=68e-3,
-    groove=SquareGroove(r1=0, r2=3e-3, tip_angle=pi / 2, tip_depth=34e-3),
+in_profile = Profile.round(
+    diameter=30e-3,
     temperature=1200 + 273.15,
     strain=0,
-    material="C45",
-    flow_stress=50e6
+    material=["C45", "steel"],
+    flow_stress=100e6
 )
 
 # pass sequence
-sequence = [
+sequence = PassSequence([
     RollPass(
-        label="Diamond I",
-        groove=DiamondGroove(
-            usable_width=76.55e-3,
-            tip_depth=22.1e-3,
-            r1=12e-3,
-            r2=8e-3
+        label="Oval I",
+        roll=Roll(
+            groove=CircularOvalGroove(
+                depth=8e-3,
+                r1=6e-3,
+                r2=40e-3
+            ),
+            nominal_radius=160e-3,
+            rotational_frequency=1
         ),
-        roll_radius=160e-3,
-        velocity=1.4,
-        gap=3e-3,
+        gap=2e-3,
+    ),
+    Transport(
+        label="I => II",
+        duration=1
     ),
     RollPass(
-        label="Square II",
-        groove=SquareGroove(
-            usable_width=52.7e-3,
-            tip_depth=25.95e-3,
-            r1=8e-3,
-            r2=6e-3
+        label="Round II",
+        roll=Roll(
+            groove=RoundGroove(
+                r1=1e-3,
+                r2=12.5e-3,
+                depth=11.5e-3
+            ),
+            nominal_radius=160e-3,
+            rotational_frequency=1
         ),
-        roll_radius=160e-3,
-        velocity=1.4,
-        gap=3e-3,
+        gap=2e-3,
     ),
-]
+])
 ```
 
-The attributes to give as keyword arguments to the constructors depend on the plugins loaded. Most plugins need
-additional data about the pass sequence or the incoming profile. For information on the basic data needed see the docs
-of [Profile](../core/profile.md), [RollPass](../core/units.md#roll-passes) and [Transport](../core/units.md#transports).
+The attributes to give as keyword arguments to the constructors depend on the plugins loaded. 
+Most plugins need additional data about the pass sequence or the incoming profile. 
