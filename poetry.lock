@@ -644,7 +644,7 @@ Shapely = ">=1.8.1,<2.0.0"
 
 [[package]]
 name = "pyroll-export"
-version = "2.0.0a1"
+version = "2.0.0a1.post1"
 description = "PyRoll rolling simulation framework - data export."
 category = "main"
 optional = false
@@ -658,7 +658,7 @@ pyroll-core = ">=2.0.0a,<3.0.0"
 
 [[package]]
 name = "pyroll-report"
-version = "2.0.0a1"
+version = "2.0.0a1.post1"
 description = "PyRoll rolling simulation framework - HTML report generation."
 category = "main"
 optional = false
@@ -1675,12 +1675,12 @@ pyroll-core = [
     {file = "pyroll_core-2.0.0a3.post1.tar.gz", hash = "sha256:4134333023fd58cce2984fcfdd21e679bb4137ecef90854674cb2db47520c805"},
 ]
 pyroll-export = [
-    {file = "pyroll_export-2.0.0a1-py3-none-any.whl", hash = "sha256:0490aa732bbbc6f16f820b22e24b7a0fc1a28726038b90b3a5518d16cda68c79"},
-    {file = "pyroll_export-2.0.0a1.tar.gz", hash = "sha256:be99d909f8bb23b8a20b2ce51755d1c8f20f1f123c99fdd34cb2eae5d034b226"},
+    {file = "pyroll_export-2.0.0a1.post1-py3-none-any.whl", hash = "sha256:28587fa2a4ad25df1befb4012f24ca53210f216f61849681e43cde9f8b1681fe"},
+    {file = "pyroll_export-2.0.0a1.post1.tar.gz", hash = "sha256:02003656ebf1e821192ee524241ec1f696c30f491f11db19ea295a476324dda7"},
 ]
 pyroll-report = [
-    {file = "pyroll_report-2.0.0a1-py3-none-any.whl", hash = "sha256:eeae539b8cc8bd17f2b84cc07bc191b7d3a1b2c9ecb77f55a90bd958d2e669e9"},
-    {file = "pyroll_report-2.0.0a1.tar.gz", hash = "sha256:280cb0d1c9b08566ffaba3434eef59127fa7b4bbc8767bf6887a54854235d47a"},
+    {file = "pyroll_report-2.0.0a1.post1-py3-none-any.whl", hash = "sha256:e4948765f6b7ba92e94b7f73fb8a6fb9a259d0d80cef44cd2e7981e0f1e87617"},
+    {file = "pyroll_report-2.0.0a1.post1.tar.gz", hash = "sha256:2be284e5a7d8dac00e7f9d019a356cabda54b886febe4ce818eed4bd91c68bb2"},
 ]
 pytask = [
     {file = "pytask-0.2.7-py3-none-any.whl", hash = "sha256:f4dec18784348bd40094837f42f587baf1d73cafa8721fdf02f3645070119a99"},
