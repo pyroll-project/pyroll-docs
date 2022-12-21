@@ -6,6 +6,97 @@
       "source": "https://github.com/pyroll-project/pyroll-wusatowski-spreading",
       "pypi": "https://pypi.org/project/pyroll-wusatowski-spreading",
       "description": "Provides Wusatowski's spreading model."
+    },
+    {
+      "name": "pyroll-integral-thermal",
+      "docs": "https://github.com/pyroll-project/pyroll-integral-thermal/blob/main/docs/docs.md",
+      "source": "https://github.com/pyroll-project/pyroll-integral-thermal",
+      "pypi": "https://pypi.org/project/pyroll-integral-thermal",
+      "description": "Provides an integral approach for thermal modelling."
+    },
+    {
+      "name": "pyroll-roux-spreading",
+      "docs": "https://github.com/pyroll-project/pyroll-roux-spreading/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-roux-spreading",
+      "pypi": "https://pypi.org/project/pyroll-roux-spreading/",
+      "description": "Provides Roux' spreading model."
+    },
+    {
+      "name": "pyroll-sparling-spreading",
+      "docs": "https://github.com/pyroll-project/pyroll-sparling-spreading/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-sparling-spreading",
+      "pypi": "https://pypi.org/project/pyroll-sparling-spreading",
+      "description": "Provides Wusatowski's spreading model."
+    },
+    {
+      "name": "pyroll-sander-spreading",
+      "docs": "https://github.com/pyroll-project/pyroll-sander-spreading/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-sander-spreading",
+      "pypi": "https://pypi.org/project/pyroll-sander-spreading",
+      "description": "Provides Sander's spreading model."
+    },
+    {
+      "name": "pyroll-hill-spreading",
+      "docs": "https://github.com/pyroll-project/pyroll-hill-spreading/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-hill-spreading",
+      "pypi": "https://pypi.org/project/pyroll-hill-spreading",
+      "description": "Provides Hill's spreading model."
+    },
+    {
+      "name": "pyroll-marini-spreading",
+      "docs": "https://github.com/pyroll-project/pyroll-marini-spreading/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-marini-spreading",
+      "pypi": "https://pypi.org/project/pyroll-marini-spreading",
+      "description": "Provides Marini's spreading model."
+    },
+    {
+      "name": "pyroll-zouhar-contact",
+      "docs": "https://github.com/pyroll-project/pyroll-zouhar-contact/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-zouhar-contact",
+      "pypi": "https://pypi.org/project/pyroll-zouhar-contact",
+      "description": "Provides the contact area estimation by Zouhar."
+    },
+    {
+      "name": "pyroll-hensel-power-and-labour",
+      "docs": "https://github.com/pyroll-project/pyroll-hensel-power-and-labour/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-hensel-power-and-labour",
+      "pypi": "https://pypi.org/project/pyroll-hensel-power-and-labour",
+      "description": "Provides the roll force and roll torque empirical approach by A. Hensel."
+    },
+    {
+      "name": "pyroll-freiberg-flow-stress",
+      "docs": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress/blob/main/docs/index.md",
+      "source": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress",
+      "pypi": "https://pypi.org/project/pyroll-freiberg-flow-stress",
+      "description": "Provides the Freiberg flow stress approach and a material database."
+    },
+    {
+      "name": "pyroll-sims-power-and-labour",
+      "docs": "https://github.com/pyroll-project/pyroll-sims-power-and-labour/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-sims-power-and-labour",
+      "pypi": "https://pypi.org/project/pyroll-sims-power-and-labour",
+      "description": "Provides the power and labour calculations from R.B. Sims."
+    },
+    {
+      "name": "pyroll-hitchcock-roll-flattening",
+      "docs": "https://github.com/pyroll-project/pyroll-hitchcock-roll-flattening/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-hitchcock-roll-flattening",
+      "pypi": "https://pypi.org/project/pyroll-hitchcock-roll-flattening",
+      "description": "Provides the roll force correction through flattening by J. Hitchcook adapted by Bohm and Flaxa."
+    },
+    {
+      "name": "pyroll-lendl-equivalent-method",
+      "docs": "https://github.com/pyroll-project/pyroll-lendl-equivalent-method/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-lendl-equivalent-method",
+      "pypi": "https://pypi.org/project/pyroll-lendl-equivalent-method",
+      "description": "Provides the equivalent method from A.E. Lendl."
+    },
+    {
+      "name": "pyroll-work-roll-elastic-deformation",
+      "docs": "https://github.com/pyroll-project/pyroll-work-roll-elastic-deformation/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-work-roll-elastic-deformation",
+      "pypi": "https://pypi.org/project/pyroll-work-roll-elastic-deformation",
+      "description": "Provides the calculation of elastic work roll deformation by matrix method."
     }
   ],
   "unofficial": [
