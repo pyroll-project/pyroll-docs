@@ -1,5 +1,8 @@
 # Usage of the PyRolL Command Line Interface
 
+```{py:currentmodule} pyroll.core
+```
+
 If the `pyroll-cli` package is installed via `pip`, a command line tool named `pyroll` is installed in the system.
 
 > If the tool is not available, please check the content of your `PATH` environment variable.

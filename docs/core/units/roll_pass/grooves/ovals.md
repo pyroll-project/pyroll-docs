@@ -13,7 +13,7 @@ It is defined by two radii $r_1$ and $r_2$ and the depth $d$.
 The geometric constraints are $r_1 << r_2$ and $d << r_2$.
 $r_3$ and $r_4$ are considered to be zero, as well as $b_d$ and $b_d'$.
 
-The topology of this groove is similar to the [round groove](rounds#the-round-groove), with the main difference, that
+The topology of this groove is similar to the [round groove](rounds.md#the-round-groove), with the main difference, that
 the center of $r_2$ is not placed in the center of the groove. For this reason $d$ is typically much smaller than $`r_2`
 $.
 
@@ -61,7 +61,7 @@ $r_3$ and $r_4$ are considered to be zero.
 $b_d$ was chosen in favor of the even ground width $b_d'$, because it does not change when the radii are modified.
 So the overall geometry remains the same if one modifies only the radii.
 
-The topology of this groove is similar to the [box groove](boxes#the-box-groove), but typically the flank angles are smaller
+The topology of this groove is similar to the [box groove](boxes.md#the-box-groove), but typically the flank angles are smaller
 and the groove is less deep.
 
 ```{eval-rst} 

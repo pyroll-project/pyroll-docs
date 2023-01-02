@@ -1,5 +1,8 @@
 # HTML Report Generation
 
+```{py:currentmodule} pyroll.core
+```
+
 The `pyroll-report` package provides a function to generate a HTML report page displaying the simulation results as tables and plots.
 The content of the report is extendable by using pluggy hooks (see [here](https://pluggy.readthedocs.io/) for information about pluggy in general).
 The {py:func}`pyroll.report.report` function takes a {py:class}`PassSequence` object to generate the report from.

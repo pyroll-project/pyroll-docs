@@ -35,6 +35,7 @@ release = '2.0.0a'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "readthedocs_ext.readthedocs",
     "myst_parser",
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
@@ -48,6 +49,9 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+toc_object_entries = False
+# nitpicky = True
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -83,6 +87,7 @@ myst_enable_extensions = [
 add_module_names = False
 autodoc_typehints_format = "short"
 autoclass_content = "both"
+autodoc_member_order = "groupwise"
 
 # InterSphinx
 intersphinx_mapping = {
@@ -92,9 +97,6 @@ intersphinx_mapping = {
     "shapely": ("https://shapely.readthedocs.io/en/stable/", None),
     "numpy": ("https://numpy.org/doc/stable/", None),
 }
-
-# Autodoc
-autodoc_member_order = "groupwise"
 
 # Jinja
 
