@@ -36,7 +36,8 @@ release = '2.0.0a'
 # ones.
 extensions = [
     "readthedocs_ext.readthedocs",
-    "myst_parser",
+    # "myst_parser",
+    "myst_nb",
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
     "sphinx_rtd_theme",
@@ -81,7 +82,9 @@ myst_enable_extensions = [
     "fieldlist",
     "smartquotes",
     "replacements",
+    "html_image",
 ]
+nb_execution_in_temp = False
 
 # AutoDoc
 add_module_names = False

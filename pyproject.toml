@@ -31,12 +31,15 @@ Sphinx = "^5.0.0"
 myst-parser = "^0.18.0"
 sphinx-rtd-theme = "^1.1.1"
 readthedocs-sphinx-ext = "^2.2.0"
+myst-nb = "^0.17.1"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^7.0.0"
 ipython = "^8.3.0"
 schemdraw = "^0.15"
 pytask = "^0.2.5"
+jupyter = "^1.0.0"
+pyroll-basic = "^2.0.0a"
 
 [tool.poetry.scripts]
 pyroll = 'pyroll.ui.cli:main'
