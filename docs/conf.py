@@ -93,13 +93,13 @@ autoclass_content = "both"
 autodoc_member_order = "groupwise"
 
 # InterSphinx
-intersphinx_mapping = {
-    "pluggy": ("https://pluggy.readthedocs.io/en/stable", None),
-    "pandas": ("https://pandas.pydata.org/docs/", None),
-    "maplotlib": ("https://matplotlib.org/stable/", None),
-    "shapely": ("https://shapely.readthedocs.io/en/stable/", None),
-    "numpy": ("https://numpy.org/doc/stable/", None),
-}
+# intersphinx_mapping = {
+#     "pluggy": ("https://pluggy.readthedocs.io/en/stable", None),
+#     "pandas": ("https://pandas.pydata.org/docs/", None),
+#     "maplotlib": ("https://matplotlib.org/stable/", None),
+#     "shapely": ("https://shapely.readthedocs.io/en/stable/", None),
+#     "numpy": ("https://numpy.org/doc/stable/", None),
+# }
 
 # Jinja
 

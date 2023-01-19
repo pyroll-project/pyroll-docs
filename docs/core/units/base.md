@@ -10,6 +10,10 @@ The outgoing state is available through the {py:attr}`Unit.out_profile` attribut
 Each unit can be supplied a label for human identification at creation or by attribute setting.
 It is mostly used in user interfaces later on.
 
+A unit instance also has a {py:attr}`Unit.parent` property, which returns a reference to the containing unit, if there is one.
+This offers the possibility to access attributes of the pass sequence, or, in case of disk elements, of the actual unit currently solved.
+The return of this property is `None`, if there is no parent unit (for example on the root pass sequence).
+
 ```{eval-rst} 
 .. autoclass:: Unit
     :members:

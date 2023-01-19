@@ -97,6 +97,20 @@
       "source": "https://github.com/pyroll-project/pyroll-work-roll-elastic-deformation",
       "pypi": "https://pypi.org/project/pyroll-work-roll-elastic-deformation",
       "description": "Provides the calculation of elastic work roll deformation by matrix method."
+    },
+    {
+      "name": "pyroll-ring-model",
+      "docs": "https://github.com/pyroll-project/pyroll-ring-model/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-ring-model",
+      "pypi": "https://pypi.org/project/pyroll-ring-model",
+      "description": "Provides a basic interface for inhomogeneous modelling with gradients in radial direction (from core to surface)."
+    },
+    {
+      "name": "pyroll-ring-model-thermal",
+      "docs": "https://github.com/pyroll-project/pyroll-ring-model-thermal/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-ring-model-thermal",
+      "pypi": "https://pypi.org/project/pyroll-ring-model-thermal",
+      "description": "Provides thermal model based on the ring model approach."
     }
   ],
   "unofficial": [
