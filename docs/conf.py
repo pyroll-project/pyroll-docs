@@ -79,7 +79,9 @@ myst_heading_anchors = 3
 myst_title_to_header = True
 myst_enable_extensions = [
     "dollarmath",
+    "colon_fence",
     "fieldlist",
+    "deflist",
     "smartquotes",
     "replacements",
     "html_image",

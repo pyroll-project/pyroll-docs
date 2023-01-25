@@ -1,4 +1,43 @@
-# Basic Assumptions
+# Basic Assumptions and Definitions
+
+The following terms shall be defined:
+
+Rolling Direction, Length Direction, Longitudinal Direction
+~ direction of principal material flow
+
+Length, $l$
+~ extent of the workpiece in rolling direction
+
+Thickness Direction, Height Direction
+~ direction of reduction during a roll pass
+
+Thickness, Height, $h$
+~ extent of the workpiece cross-section in thickness resp. height direction
+
+Width Direction
+~ direction of spreading during a roll pass
+
+Width, $w$
+~ extent of the workpiece in width direction
+
+See the following figures for clarification of height and width directions in two-roll and three-roll passes.
+Note, that in three-roll passes the measure width and height a rather imaginary measures, since in fact only the half width and half height can be measured, due to the 3-fold rotation symmetry.
+
+:::{figure-md} fig:directions-two-roll
+:align: center
+
+![Two-Roll Pass Directions](/img/directions-two-roll.svg)
+
+Directions in Two-Roll Passes
+:::
+
+:::{figure-md} fig:directions-three-roll
+:align: center
+
+![Three-Roll Pass Directions](/img/directions-three-roll.svg)
+
+Directions in Three-Roll Passes
+:::
 
 In the following some basic assumptions that are made within code and design are listed.
 Keep them in mind while reading through the documentation.
