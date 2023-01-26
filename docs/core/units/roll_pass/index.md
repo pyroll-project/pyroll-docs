@@ -11,6 +11,7 @@ Read the following sections for detailed information on those.
 ```{toctree}
 rolls
 grooves/index
+three_roll_pass
 ```
 
 To create a roll pass, one must create three objects: a groove, a roll and finally the roll pass itself.
