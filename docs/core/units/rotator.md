@@ -20,6 +20,7 @@ Currently, there are the following defaults:
 | box                | box               | 90            |
 | box                | diamond           | 45            |
 | box                | oval              | 90            |
+| square             | box               | 45            |
 | round              | flat              | 90            |
 
 The recommended way to influence the rotation is by using the {py:attr}`RollPass.rotation` hook, unless one has a concrete need for a dedicated rotator unit.
