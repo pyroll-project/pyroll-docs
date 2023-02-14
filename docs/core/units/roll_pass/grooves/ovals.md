@@ -9,12 +9,12 @@ The {py:class}`CircularOvalGroove` class represents an oval-shaped groove consis
 
 ![circular oval groove geometry](/img/circular_oval.svg)
 
-It is defined by two radii $r_1$ and $r_2$ and the depth $d$.
+It is defined by the radius $r_1$ and any two of radius $r_2$, depth $d$ and usable width $w_\mathrm{u}$.
 The geometric constraints are $r_1 << r_2$ and $d << r_2$.
-$r_3$ and $r_4$ are considered to be zero, as well as $b_d$ and $b_d'$.
+$r_3$ and $r_4$ are considered to be zero, as well as $w_\mathrm{g}'$.
 
 The topology of this groove is similar to the [round groove](rounds.md#the-round-groove), with the main difference, that
-the center of $r_2$ is not placed in the center of the groove. For this reason $d$ is typically much smaller than $`r_2`
+the center of $r_2$ is not placed in the center of the groove. For this reason $d$ is typically much smaller than $r_2$
 $.
 
 ```{eval-rst} 
@@ -29,9 +29,9 @@ figure.
 
 ![flat oval groove geometry](/img/flat_oval.svg)
 
-Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as the depth $d$ and the usable width $b_
-\mathrm{kn}$.
-The depth is $d$ typically $\le \frac{b_\mathrm{kn}}{2}$.
+Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as the depth $d$.
+Additionally, one of the usable width $w_\mathrm{u}$ and the even ground width $w_\mathrm{g}'$ must be given.
+The depth is $d$ typically $\le \frac{w_\mathrm{u}}{2}$.
 $r_3$ and $r_4$ are considered to be zero.
 
 ```{eval-rst} 
@@ -41,7 +41,7 @@ $r_3$ and $r_4$ are considered to be zero.
 
 ## The Swedish Oval Groove
 
-The {py:class}`SwedishOvalGroove` class represents a hexagonal shaped groove as shown in the figure. The term "hexagonal" is also
+The {py:class}`SwedishOvalGroove` class represents a hexagonal-shaped groove as shown in the figure. The term "hexagonal" is also
 used for this type of groove, but can be confused with regular hexagon shaped grooves. The current type of groove is
 used as an oval and therefore the term swedish oval should be used, which is derived from its origin in swedish steel
 plants.
@@ -51,17 +51,17 @@ plants.
 Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as the depth $d$. To constrain
 geometry fully, any two of the following must be given:
 
-- usable width $b_\mathrm{kn}$
-- ground width $b_d$
-- flank angle $\alpha_1$
+- usable width $w_\mathrm{u}$
+- ground width $w_g$
+- flank angle $\alpha$
 
-The radii are typically small, the depth is $d$ typically $<< \frac{b_\mathrm{kn}}{2}$.
+The radii are typically small, the depth is $d$ typically $<< \frac{w_\mathrm{u}}{2}$.
 $r_3$ and $r_4$ are considered to be zero.
 
-$b_d$ was chosen in favor of the even ground width $b_d'$, because it does not change when the radii are modified.
+$b_d$ was chosen in favor of the even ground width $w_\mathrm{g}'$, because it does not change when the radii are modified.
 So the overall geometry remains the same if one modifies only the radii.
 
-The topology of this groove is similar to the [box groove](boxes.md#the-box-groove), but typically the flank angles are smaller
+The topology of this groove is equal to the [box groove](boxes.md#the-box-groove), but typically the flank angles are smaller
 and the groove is less deep.
 
 ```{eval-rst} 
@@ -76,14 +76,14 @@ ground as shown in the figure.
 
 ![constricted swedish oval groove geometry](/img/constricted_swedish_oval.svg)
 
-Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as the depth $d$ and the indent $`i`
-$. To constrain geometry fully, any two of the following must be given:
+Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as the depth $d$ and the indent $i$. 
+To constrain geometry fully, any two of the following must be given:
 
-- usable width $b_\mathrm{kn}$
-- ground width $b_d$
-- flank angle $\alpha_1$
+- usable width $w_\mathrm{u}$
+- ground width $w_\mathrm{g}$
+- flank angle $\alpha$
 
-The radii are typically small, the depth is $d$ typically $<< \frac{b_\mathrm{kn}}{2}$.
+The radii are typically small, the depth is $d$ typically $<< \frac{w_\mathrm{u}}{2}$.
 $r_3$ and $r_4$ are considered to be zero.
 
 ```{eval-rst} 
@@ -93,14 +93,14 @@ $r_3$ and $r_4$ are considered to be zero.
 
 ## The Three Radii Oval Groove
 
-The {py:class}`Oval3RadiiGroove` class represents an oval shaped groove consisting of three radii as shown in the figure.
+The {py:class}`Oval3RadiiGroove` class represents an oval-shaped groove consisting of three radii as shown in the figure.
 
 ![3 radii oval groove geometry](/img/oval_3radii.svg)
 
 Mandatory measures of this groove are the three radii $r_1$, $r_2$ and $r_3$, as well as the depth $d$ and the
-usable width $b_\mathrm{kn}$.
+usable width $w_\mathrm{u}$.
 
-The depth is $d$ typically $\le \frac{b_\mathrm{kn}}{2}$.
+The depth is $d$ typically $\le \frac{w_\mathrm{u}}{2}$.
 $r_4$ and $b_d'$ are considered to be zero.
 
 ```{eval-rst} 
@@ -110,13 +110,14 @@ $r_4$ and $b_d'$ are considered to be zero.
 
 ## The Flanked Three Radii Oval Groove
 
-The {py:class}`Oval3RadiiFlankedGroove` class represents an oval shaped groove consisting of three radii and a small straight
+The {py:class}`Oval3RadiiFlankedGroove` class represents an oval-shaped groove consisting of three radii and a small straight
 flank as shown in the figure.
 
 ![3 radii flanked oval groove geometry](/img/oval_3radii_flanked.svg)
 
-Mandatory measures of this groove are the three radii $r_1$, $r_2$ and $r_3$, as well as the depth $d$, the
-usable width $b_\mathrm{kn}$ and the flank angle $\alpha_1$.
+Mandatory measures of this groove are the three radii $r_1$, $r_2$ and $r_3$, as well as the depth $d$ and the
+usable width $b_\mathrm{kn}$.
+The flank is determined by either one of the flank angle `\phi`, the flank's horizontal width, its vertical height or collinear length.
 
 The depth is $d$ typically $\le \frac{b_\mathrm{kn}}{2}$.
 $r_4$ and $b_d'$ are considered to be zero.
