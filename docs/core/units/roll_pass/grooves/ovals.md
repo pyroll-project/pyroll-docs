@@ -52,7 +52,7 @@ Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as 
 geometry fully, any two of the following must be given:
 
 - usable width $w_\mathrm{u}$
-- ground width $w_g$
+- ground width $w_g$ or even ground width $w'_\mathrm{g}$
 - flank angle $\alpha$
 
 The radii are typically small, the depth is $d$ typically $<< \frac{w_\mathrm{u}}{2}$.
@@ -80,7 +80,7 @@ Mandatory measures of this groove are the two radii $r_1$ and $r_2$, as well as 
 To constrain geometry fully, any two of the following must be given:
 
 - usable width $w_\mathrm{u}$
-- ground width $w_\mathrm{g}$
+- ground width $w_\mathrm{g}$ or even ground width $w'_\mathrm{g}$
 - flank angle $\alpha$
 
 The radii are typically small, the depth is $d$ typically $<< \frac{w_\mathrm{u}}{2}$.
@@ -124,5 +124,22 @@ $r_4$ and $b_d'$ are considered to be zero.
 
 ```{eval-rst} 
 .. autoclass:: Oval3RadiiFlankedGroove
+    :members:
+```
+
+## The Upset Oval Groove
+
+The {py:class}`UpsetOvalGroove` class represents a square shaped groove with curved edges as shown in the figure.
+
+![square groove geometry](/img/square.svg)
+
+Mandatory measures of this groove are the radii $r_1$, $r_2$ and $r_3$, as well as the usable width $w_\mathrm{u}$ and depth $d$.
+
+The radii $r_1$ and $r_3$ are typically small, the depth $d$ is typically $\approx \frac{w_\mathrm{u}}{2}$. The tip angle
+$\delta$ is typically one or two degree larger than 90° for wear reasons.
+$r_3$ is much larger than the other radii.
+
+```{eval-rst} 
+.. autoclass:: GothicGroove
     :members:
 ```

@@ -5,7 +5,7 @@
 
 ## The Box Groove
 
-The {py:class}`BoxGroove` class represents a rectangular shaped groove as shown in the figure. For wear reasons, the flanks a
+The {py:class}`BoxGroove` class represents a rectangular shaped groove as shown in the figure. For wear reasons, the flanks are
 typically inclined by a small angle.
 
 ![box groove geometry](/img/box.svg)
@@ -14,7 +14,7 @@ Mandatory measures of the box groove are the two radii $r_1$ and $r_2$, as well 
 geometry fully, any two of the following must be given:
 
 - usable width $w_\mathrm{u}$
-- ground width $w_\mathrm{g}$
+- ground width $w_\mathrm{g}$ or even ground width $w'_\mathrm{g}$
 - flank angle $\alpha$
 
 The radii are typically small, the depth is $d$ typically $\le \frac{w_\mathrm{u}}{2}$.
@@ -28,10 +28,17 @@ So the overall geometry remains the same if one modifies only the radii.
     :members:
 ```
 
+If the depth/width ratio is high, consider to use the {py:class}`UpsetBoxGroove` instead.
+
+```{eval-rst} 
+.. autoclass:: UpsetBoxGroove
+    :members:
+```
+
 ## The Constricted Box Groove
 
 The {py:class}`ConstrictedBoxGroove` class represents a [`BoxGroove`](#the-box-groove) but with an indent in the ground as shown in the
-figure.
+figure. The groove has and indent resp. constriction in the ground.
 
 ![constricted box groove geometry](/img/constricted_box.svg)
 
@@ -39,7 +46,7 @@ Mandatory measures of the box groove are the two radii $r_1$ and $r_2$, as well 
 $i$. To constrain geometry fully, any two of the following must be given:
 
 - usable width $w_\mathrm{u}$
-- ground width $w_\mathrm{g}$
+- ground width $w_\mathrm{g}$ or even ground width $w'_\mathrm{g}$
 - flank angle $\alpha$
 
 The radii are typically small, the depth is $d$ typically $\le \frac{w_\mathrm{u}}{2}$.
@@ -47,5 +54,12 @@ $r_3$ and $r_4$ are considered to be zero.
 
 ```{eval-rst} 
 .. autoclass:: ConstrictedBoxGroove
+    :members:
+```
+
+If the depth/width ratio is high, consider to use the {py:class}`ConstrictedUpsetBoxGroove` instead.
+
+```{eval-rst} 
+.. autoclass:: ConstrictedUpsetBoxGroove
     :members:
 ```

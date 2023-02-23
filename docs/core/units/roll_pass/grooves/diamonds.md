@@ -57,3 +57,20 @@ a [`DiamondGroove`](#the-diamond-groove) instead.
 .. autoclass:: SquareGroove
     :members:
 ```
+
+## The Gothic Groove
+
+The {py:class}`GothicGroove` class represents oval-shaped groove standing on the edge as shown in the figure.
+
+![square groove geometry](/img/gothic.svg)
+
+Mandatory measures of this groove are the radii $r_1$, $r_2$ and $r_3$, as well as the usable width $w_\mathrm{u}$ and depth $d$.
+
+The radii $r_1$ and $r_3$ are typically small, the depth $d$ is typically $\ge w_\mathrm{u}$. The tip angle
+$\delta$ is typically one or two degree larger than 90° for wear reasons.
+$r_2$ is much larger than the other radii.
+
+```{eval-rst} 
+.. autoclass:: GothicGroove
+    :members:
+```
