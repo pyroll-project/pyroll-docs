@@ -28,10 +28,10 @@ depends on the loaded plugins.
 For the units types, specialized versions of the `Profile` class are defined as nested classes within the respective unit class.
 They all maintain their own hooks, so it is possible to specify hooks on profiles only for those places, were they are applicable.
 
-## Profile Types
+## Profile Classifiers
 
 As profile have an infinite variety of cross-section shapes, for the use of empirical models, the shape must be classified.
-This is achieved by the {py:attr}`Profile.types` hook, which returns a set of string classifiers describing the shape of the profile.
+This is achieved by the {py:attr}`Profile.classifiers` hook, which returns a set of string classifiers describing the shape of the profile.
 Model hook functions can check the contents of this set to determine, if the model approach they provide is suitable to the given profile.
 Grooves and roll passes make use of the same classifiers, as they transfer their classifiers to the new outgoing profile.
 

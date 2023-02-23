@@ -11,7 +11,7 @@ Always pay attention when simulating three-roll passes, that appropriate models 
 The main difference is that the dimensions of a three-roll pass are not right-angled, due to the 3-fold symmetry.
 As the figure shows, the width and height are under an angle of odd multiples of 60°.
 The caveat is, that width and height can not directly be measured here, but only their half.
-This measure is implemented as hook functions for profiles featuring the type `"3fold"` (see [profile types](../../profiles.md#profile-types) for further information).
+This measure is implemented as hook functions for profiles featuring the type `"3fold"` (see [Profile Classifiers](../../profiles.md#profile-classifiers) for further information).
 
 The width of ideal filling of the roll pass is here also dependent on the roll gap, as it is not for two-roll passes.
 The width of ideal filling $w_{i=1}$ is given by the equation below, with the usable width of the groove $w_\mathrm{u}$ and the roll gap $s$.
@@ -50,7 +50,7 @@ ThreeRollPass(
 ),
 ```
 
-Profiles originating from three-roll passes are marked with the special type classifier `"3fold"` (see [profile types](../../profiles.md#profile-types)), which indicated that the profile has a 3-fold symmetry instead of the common 2-fold symmetry of two-roll produced profiles.
+Profiles originating from three-roll passes are marked with the special type classifier `"3fold"` (see [Profile Classifiers](../../profiles.md#profile-classifiers)), which indicated that the profile has a 3-fold symmetry instead of the common 2-fold symmetry of two-roll produced profiles.
 
 ```{eval-rst} 
 .. autoclass:: ThreeRollPass

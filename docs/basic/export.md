@@ -44,7 +44,7 @@ Which leads to a file similar to this
                     "alpha2": 0.5986680528355425,
                     "depth": 0.008,
                     "usable_width": 0.04814264518817268,
-                    "types": "oval, circular_oval"
+                    "classifiers": "oval, circular_oval"
                 },
                 "roll_torque": 3492.976239911318,
                 "max_radius": 0.16,
@@ -64,7 +64,7 @@ Which leads to a file similar to this
                     "height": 0.03,
                     "perimeter": 0.09420993470864258
                 },
-                "types": "round",
+                "classifiers": "round",
                 "temperature": 1473.15,
                 "strain": 0,
                 "material": "C45, steel",
@@ -74,7 +74,7 @@ Which leads to a file similar to this
                 "length": 0
             },
             "out_profile": {
-                "types": "oval, circular_oval",
+                "classifiers": "oval, circular_oval",
                 "temperature": 1473.15,
                 "strain": 0.12967679498342286,
                 "material": "C45, steel",
@@ -97,7 +97,7 @@ Which leads to a file similar to this
             "label": "I => II",
             "duration": 1,
             "in_profile": {
-                "types": "oval, circular_oval",
+                "classifiers": "oval, circular_oval",
                 "temperature": 1473.15,
                 "strain": 0.12967679498342286,
                 "material": "C45, steel",
@@ -110,7 +110,7 @@ Which leads to a file similar to this
                 "length": 0.0
             },
             "out_profile": {
-                "types": "oval, circular_oval",
+                "classifiers": "oval, circular_oval",
                 "temperature": 1473.15,
                 "strain": 0,
                 "material": "C45, steel",
@@ -135,7 +135,7 @@ Which leads to a file similar to this
                     "alpha2": 1.422100832527334,
                     "depth": 0.0115,
                     "usable_width": 0.02497934630720916,
-                    "types": "round"
+                    "classifiers": "round"
                 },
                 "roll_torque": 3548.7909827990825,
                 "max_radius": 0.16,
@@ -150,7 +150,7 @@ Which leads to a file similar to this
             },
             "gap": 0.002,
             "in_profile": {
-                "types": "oval, circular_oval",
+                "classifiers": "oval, circular_oval",
                 "temperature": 1473.15,
                 "strain": 0,
                 "material": "C45, steel",
@@ -165,7 +165,7 @@ Which leads to a file similar to this
                 "height": 0.04814264518817268
             },
             "out_profile": {
-                "types": "round",
+                "classifiers": "round",
                 "temperature": 1473.15,
                 "strain": 0.23476395237851164,
                 "material": "C45, steel",
@@ -191,14 +191,14 @@ Which leads to a file similar to this
             "height": 0.03,
             "perimeter": 0.09420993470864258
         },
-        "types": "round",
+        "classifiers": "round",
         "temperature": 1473.15,
         "strain": 0,
         "material": "C45, steel",
         "flow_stress": 100000000.0
     },
     "out_profile": {
-        "types": "round",
+        "classifiers": "round",
         "temperature": 1473.15,
         "strain": 0.23476395237851164,
         "material": "C45, steel",
@@ -224,7 +224,7 @@ So, execute f.e.
 Which leads to a file similar to this
 
 ```csv
-,duration,elongation,gap,height,in_profile.cross_section.height,in_profile.cross_section.perimeter,in_profile.cross_section.width,in_profile.flow_stress,in_profile.height,in_profile.length,in_profile.material,in_profile.strain,in_profile.temperature,in_profile.types,in_profile.width,label,log_elongation,mean_flow_stress,out_profile.cross_section.height,out_profile.cross_section.perimeter,out_profile.cross_section.width,out_profile.flow_stress,out_profile.length,out_profile.material,out_profile.strain,out_profile.temperature,out_profile.types,out_profile.width,roll.contact_area,roll.contact_length,roll.contour_line.depth,roll.contour_line.length,roll.contour_line.width,roll.groove.alpha1,roll.groove.alpha2,roll.groove.depth,roll.groove.r1,roll.groove.r2,roll.groove.types,roll.groove.usable_width,roll.max_radius,roll.min_radius,roll.nominal_radius,roll.roll_torque,roll.rotational_frequency,roll_force
+,duration,elongation,gap,height,in_profile.cross_section.height,in_profile.cross_section.perimeter,in_profile.cross_section.width,in_profile.flow_stress,in_profile.height,in_profile.length,in_profile.material,in_profile.strain,in_profile.temperature,in_profile.classifiers,in_profile.width,label,log_elongation,mean_flow_stress,out_profile.cross_section.height,out_profile.cross_section.perimeter,out_profile.cross_section.width,out_profile.flow_stress,out_profile.length,out_profile.material,out_profile.strain,out_profile.temperature,out_profile.classifiers,out_profile.width,roll.contact_area,roll.contact_length,roll.contour_line.depth,roll.contour_line.length,roll.contour_line.width,roll.groove.alpha1,roll.groove.alpha2,roll.groove.depth,roll.groove.r1,roll.groove.r2,roll.groove.classifiers,roll.groove.usable_width,roll.max_radius,roll.min_radius,roll.nominal_radius,roll.roll_torque,roll.rotational_frequency,roll_force
 0,,1.1384603677535539,0.002,0.018000000000000002,0.03,0.09420993470864258,0.03,100000000,0.03,0,"C45, steel",0.0,1473.15,round,0.03,Oval I,0.12967679498342286,100000000,0.018000000000000002,0.10779462546810438,0.04814264518817268,100000000,0,"C45, steel",0.12967679498342286,1473.15,"oval, circular_oval",0.04814264518817268,0.0016521210699162083,0.04228474902373194,0.008,0.06025975303951582,0.05703051814598918,0.5986680528355425,0.5986680528355425,0.008,0.006,0.04,"oval, circular_oval",0.04814264518817268,0.16,0.152,0.16,3492.976239911318,1,165212.10699162082
 1,1,,,,0.018000000000000002,0.10779462546810438,0.04814264518817268,100000000,,0,"C45, steel",0.12967679498342286,1473.15,"oval, circular_oval",,I => II,,,0.018000000000000002,0.10779462546810438,0.04814264518817268,100000000,0,"C45, steel",0.0,1473.15,"oval, circular_oval",,,,,,,,,,,,,,,,,,,
 2,,1.2646102252632567,0.002,0.025,0.04814264518817268,0.10779462546810438,0.018000000000000002,100000000,0.04814264518817268,0,"C45, steel",0.0,1473.15,"oval, circular_oval",0.018000000000000002,Round II,0.23476395237851164,100000000,0.025,0.07857532958642108,0.02497934630720916,100000000,0,"C45, steel",0.23476395237851164,1473.15,round,0.02497934630720916,0.0012350089741440056,0.0574698817109208,0.0115,0.04104864528285382,0.029372265830201118,1.422100832527334,1.422100832527334,0.0115,0.001,0.0125,round,0.02497934630720916,0.16,0.1485,0.16,3548.7909827990825,1,123500.89741440056
