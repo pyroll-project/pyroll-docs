@@ -82,6 +82,10 @@ Currently, the PyRolL Core uses the following classifiers:
 ~ An approximately rectangular shaped cross-section originating from flat rolling.
   Corresponds to the {py:class}`FlatGroove`.
 
+`"gothic"`
+~ An approximately square-shaped cross-section with curved edges.
+  Corresponds to the {py:class}`GothicGroove`.
+
 `"3fold"`
 ~ A cross-section with 3-fold rotation symmetry.
   Such profiles typically originate from three-roll passes.
@@ -105,3 +109,7 @@ Currently, the PyRolL Core uses the following classifiers:
 ~ Indicates, that the profile has a constriction in its base.
   Corresponds mainly to {py:class}`ConstrictedBoxGroove` and {py:class}`ConstrictedSwedishOvalGroove`.
   Therefore, commonly in combination with `"box"` and `"swedish_oval"`.
+
+`"upset"`
+~ Indicates, that the profile originates from an upsetting groove and is therefore rotated by 90° with respect to other grooves of this type.
+  See f.e. {py:class}`UpsetOvalGroove` and {py:class}`UpsetBoxGroove`.
