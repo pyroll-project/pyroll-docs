@@ -19,7 +19,7 @@ At `OPTIONS` several global options can be set, namely:
 
 | Option                  | Description                                                                                                                                |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| `-c, --configfile PATH` | Give a path to a config YAML file. Per default the file `./config.yaml` is used if it exists. See [here](#config-file-format) for details. |
+| `-c, --configfile PATH` | Give a path to a config TOML file. Per default the file `./config.toml` is used if it exists. See [here](#config-file-format) for details. |
 | `-p, --plugin NAME`     | Give a plugin to load additionally to the ones specified in the config. Can be used multiple times.                                        |
 
 The tool provides a set of subcommands explained in [the following section](#commands).
@@ -29,7 +29,7 @@ The tool provides a set of subcommands explained in [the following section](#com
 ### `create-config`
 
 Creates a standard config file with basic logging configuration and empty plugins list. The file is created in the path
-specified by the `-f`/`--file` option, which defaults to `./config.yaml`.
+specified by the `-f`/`--file` option, which defaults to `./config.toml`.
 
 ### `create-input-py`
 
@@ -42,10 +42,10 @@ the [Institute of Metals Forming](https://tu-freiberg.de/en/fakult5/imf).
 
 Creates a new PyRolL simulation project in the directory specified by `-d/--dir`.
 The directory will be created if not already existing.
-Creates a `config.yaml` and an `input.py` in the specified directory.
+Creates a `config.toml` and an `input.py` in the specified directory.
 This command is basically a shortcut for
 
-    pyroll -c <dir>/config.yaml create-config -p -f <dir>/config.yaml create-input-py -k min -f <dir>/input.py 
+    pyroll -c <dir>/config.toml create-config -p -f <dir>/config.toml create-input-py -k min -f <dir>/input.py 
 
 in a fresh or existing directory.
 
@@ -71,7 +71,7 @@ To specify the files explicitly use:
 
 To use a different config file:
 
-    pyroll -c config2.yaml input-py solve report
+    pyroll -c config2.toml input-py solve report
 
 To load additional plugins:
 
@@ -81,53 +81,68 @@ Plugins can also be loaded by the [config file](#config-file-format) or by impor
 
 ## Config File Format
 
-The configuration has to be specified in YAML format. The content of the default config file is as follows:
+The configuration has to be specified in TOML format. 
+PyRolL looks for two config files and merges them: first the global config file in the app config directory (f.e. in `~/.config/pyroll` on Linux or `%APPDATA%\pyroll` on Windows) and second in the local working directory.
+The local file always overrides the global config.
+If the global config does not exist, the CLI creates it automatically at the first run.
+The content of the default config file is as follows:
 
-```yaml
-plugins: [ ] # list full qualified names of plugins to load (as they were importable in real python code)
+```toml
+[pyroll]
 
-logging: # configuration for the logging standard library package
-  version: 1
-  formatters:
-    console:
-      format: '[%(levelname)s] %(name)s: %(message)s'
-    file:
-      format: '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+# list full qualified names of plugins to load (as they were importable in real python code)
+plugins = [
+]
 
-  handlers:
-    console:
-      class: logging.StreamHandler
-      level: INFO
-      formatter: console
-      stream: ext://sys.stdout
-    file:
-      class: logging.FileHandler
-      level: INFO
-      formatter: file
-      filename: pyroll.log
+[pyroll.core.config]
+ROLL_PASS_AUTO_ROTATION = true
+GROOVE_PADDING = 0.2
+DEFAULT_MAX_ITERATION_COUNT = 100
+DEFAULT_ITERATION_PRECISION = 1e-2
+ROLL_SURFACE_DISCRETIZATION_COUNT = 100
 
-  root:
-    level: INFO
-    handlers: [ console, file ]
+[logging] # configuration for the logging standard library package
+version = 1
 
-  loggers:
-    matplotlib:
-      level: ERROR
+formatters.console.format = '[%(levelname)s] %(name)s: %(message)s'
+formatters.file.format = '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+
+[logging.handlers.console]
+
+class = "logging.StreamHandler"
+level = "INFO"
+formatter = "console"
+stream = "ext://sys.stdout"
+
+[logging.handlers.file]
+class = "logging.FileHandler"
+level = "DEBUG"
+formatter = "file"
+filename = "pyroll.log"
+
+[logging.root]
+level = "WARNING"
+handlers = ["console", "file"]
+
+[logging.loggers.pyroll]
+level = "DEBUG"
 ```
 
-In the plugins node several plugins can be specified to load additionally to the core functionalities. List the full
-qualified package name you want to load, as you would import in Python. For example to load
+In the plugins array several plugins can be specified to load additionally to the core functionalities. List the full
+qualified package name you want to load, as you would import in Python, or, if the package resides in the `pyroll` namespace as per convention, the name of the subpackage. 
+For example to load
 the [Wusatowski Spreading](https://github.com/pyroll-project/pyroll-wusatowski-spreading) and
 the [Integral Thermal](https://github.com/pyroll-project/pyroll-wusatowski-spreading)
 plugins:
 
-```yaml
-plugins:
-  - pyroll_wusatowski_spreading
-  - pyroll_integral_thermal
+```toml
+plugins = [
+    "pyroll.wusatowski_spreading", # with full package name
+    "integral_thermal", # assume pyroll.-prefix implicitly
+]
 ```
 
-The logging node configures logging using the Python standard `logging` package,
+The logging section configures logging using the Python standard `logging` package,
 see [here](https://docs.python.org/3/howto/logging.html) for further information on that. The default config specifies
 logging on the console and to the `pyroll.log` file on information level. If you want more detailed logging, replace
 the `INFO` specifiers with `DEBUG`. To avoid log pollution by the `matplotlib` package, their level is set to `ERROR`.
@@ -145,10 +160,10 @@ the [`input-py`](#input-py) command must define at least two variables:
 A minimal input script is shown below:
 
 ```python
-from pyroll.core import Profile, Roll, RollPass, Transport, RoundGroove, CircularOvalGroove, PassSequence
+import pyroll.core as pr
 
 # initial profile
-in_profile = Profile.round(
+in_profile = pr.Profile.round(
     diameter=30e-3,
     temperature=1200 + 273.15,
     strain=0,
@@ -157,11 +172,11 @@ in_profile = Profile.round(
 )
 
 # pass sequence
-sequence = PassSequence([
-    RollPass(
+sequence = pr.PassSequence([
+    pr.RollPass(
         label="Oval I",
-        roll=Roll(
-            groove=CircularOvalGroove(
+        roll=pr.Roll(
+            groove=pr.CircularOvalGroove(
                 depth=8e-3,
                 r1=6e-3,
                 r2=40e-3
@@ -171,14 +186,14 @@ sequence = PassSequence([
         ),
         gap=2e-3,
     ),
-    Transport(
+    pr.Transport(
         label="I => II",
         duration=1
     ),
-    RollPass(
+    pr.RollPass(
         label="Round II",
-        roll=Roll(
-            groove=RoundGroove(
+        roll=pr.Roll(
+            groove=pr.RoundGroove(
                 r1=1e-3,
                 r2=12.5e-3,
                 depth=11.5e-3
