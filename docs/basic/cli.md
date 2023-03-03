@@ -208,3 +208,25 @@ sequence = pr.PassSequence([
 
 The attributes to give as keyword arguments to the constructors depend on the plugins loaded. 
 Most plugins need additional data about the pass sequence or the incoming profile. 
+
+## Shell Tab Completion
+
+To configure tab completion for common shells execute one of the following commands.
+
+### `bash`
+
+```shell
+_PYROLL_COMPLETE=bash_source >> ~/.bashrc
+```
+
+### `zsh`
+
+```shell
+_PYROLL_COMPLETE=zsh_source >> ~/.zshrc
+```
+
+### `fish`
+
+```shell
+_PYROLL_COMPLETE=fish_source >> ~/.config/fish/completions/pyroll.fish
+```
