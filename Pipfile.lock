@@ -1416,8 +1416,11 @@
             "hashes": [
                 "sha256:132e45b0a52397d95e59abc2aba6a9d27ec09b7ad321e62f01204f039d8b8e2c",
                 "sha256:511d16366439d20d51f11db439ead17b3b4ca3cea788b3582cf6116be64ebd4f",
+                "sha256:6400c649b30dbdc24762f478c61638122235218fbed52f4956cba6ba18914c6a",
+                "sha256:b36d845141ed128d32204acafb42156b79b5c364721ee857fbf68fbde831b4a8",
                 "sha256:fb75d86b1b647632ba0e65662f3d81806d6e07971ffa4addde7bcb36afe9aafb"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0.0"
         },
         "pyroll-core": {
@@ -1425,71 +1428,97 @@
                 "sha256:729707ca9e30ee3b58493b1c3a45895dfb8732ab0a20534310fefc224c3e1714",
                 "sha256:982019b6d63d89e7032c5b93f9aa72dd2ed45c03ffbfc884570d59e2a4551cf7"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0.1"
         },
         "pyroll-export": {
             "hashes": [
                 "sha256:0af6fc89a7fc20e66f7cb92f3aa0c8ef94615ba688167817e48c1f150231ecef",
                 "sha256:26898096db82aa4ba4111e017c8d6704b74b127b66ad845b8900f7951a3d1298",
-                "sha256:60e425ff95a586fcc74b923d59eff3253e94183225e91aff55e9d0108af7b1e8"
+                "sha256:3b74e368d71702686086a000c0c9fd950b3e15cd50b19105fab83c3801a74e14",
+                "sha256:60e425ff95a586fcc74b923d59eff3253e94183225e91aff55e9d0108af7b1e8",
+                "sha256:c69e2cc5d8daf9cf85243c633c8eecfcd8487018c5f0ac205cb27e025cd56d09"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0.0"
         },
         "pyroll-freiberg-flow-stress": {
             "hashes": [
+                "sha256:7c7863e9d0d4a6d0b648dab29f69a9075bc1e3dd601b296aa400a9768f00abfd",
                 "sha256:a05433cab99e22b2a72bc4313aec52836ad8d1d52be3d7c84c8ada9bc83e45c1",
-                "sha256:b1423fb09bac9862f18eab7d448be5b0c6c6061c217234b677bb1c37e2541bea"
+                "sha256:b1423fb09bac9862f18eab7d448be5b0c6c6061c217234b677bb1c37e2541bea",
+                "sha256:e8d42bcf08dc66be84ab28f678e9cfec9172a7038be8eb12de79eb79328da34f"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0.0"
         },
         "pyroll-hensel-power-and-labour": {
             "hashes": [
+                "sha256:2a4a24036ba9ee286ff3c71a620e302597046f542b68fa4cc8db2b6591a67c33",
+                "sha256:6d5e68deec0eb967169babd4c6e56ca4aaa389a6387b15c2b61d6ccd1c1190fd",
                 "sha256:6fed375383441b5164a0c92089f9526efd4d9ff2cccab576062d6a836f07997f",
                 "sha256:a326e372a3fc628b4ba4083487d8e71a9f445f197e9af1a2198a0b4d8bc1c5bf"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0.0"
         },
         "pyroll-hitchcock-roll-flattening": {
             "hashes": [
                 "sha256:0c60a788fd985e4e8d56bf626502d519ba2c11568b5256db82f3b78f7946e275",
-                "sha256:24c397bdee68eb00001f33f63bc64901943eb94143536c9f3f7457039a0c07ee"
+                "sha256:24c397bdee68eb00001f33f63bc64901943eb94143536c9f3f7457039a0c07ee",
+                "sha256:484a5c57cd19067b807c6053406a9724c55647644f7e610a6bd65df9c426ed62",
+                "sha256:724acaa4249839db1501ee5b4d8231e939620d29e0aace7b40e45909a082be46"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0.0"
         },
         "pyroll-integral-thermal": {
             "hashes": [
+                "sha256:5354dd32b9d4b8121154a4f1fec47608beff3ac3320586afcd8f7d3df86abb76",
                 "sha256:5f7275f8709e004a54a5da375d90deffef9d838ed5ccd3cb74b1af71002d2d6e",
-                "sha256:7906930453d2fbd63c41ac24bf45197e62cf2cefb951c30763dc27fe905e7ed1"
+                "sha256:7906930453d2fbd63c41ac24bf45197e62cf2cefb951c30763dc27fe905e7ed1",
+                "sha256:d2f6fdb3d85946df74ec74807b18aa02ff1b6f1cd42ac137151feecc0c2e1871"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0"
         },
         "pyroll-lendl-equivalent-method": {
             "hashes": [
-                "sha256:794eb971e0710026f80e3975f459b10d8db941e141a2a2a4e16ae23ca37da608",
-                "sha256:7c106e95a9436d8366c0d680117d9fed14d6538aeefd84618d5b2f95cbf6d72c"
+                "sha256:20151aa3c3a1a53c8fca91646d2a9b74a5a1f42935792ffc78f554e33031648c",
+                "sha256:487fb2129e88e99ff96fff54222522f7d73e233c9bdd7fd5cef3839534d6448e"
             ],
-            "version": "==2.0.0"
+            "markers": "python_version >= '3.9'",
+            "version": "==2.0.0.post1"
         },
         "pyroll-report": {
             "hashes": [
+                "sha256:06dc9d5a3c7cb1e019d07b2b9d8762f5b8de250f532acaef7647eef1770c8355",
                 "sha256:50549ea7c1bd8f20d42c2a823543a7224633660a4996b566db922fe35733e0f6",
+                "sha256:9b21c22b69f603e92de7df435462169c2fd1f38988b477ec384902989abd302f",
                 "sha256:a3ba406b9c4278f35fe3a1bfe377a797dfb0fec368778356d717c231d59485ad",
                 "sha256:ba5d1c5375264eed89cbcf787eeb5669d42367c1a93275af4422cbb137fc71db"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0.0"
         },
         "pyroll-wusatowski-spreading": {
             "hashes": [
+                "sha256:4a8bf57920889d481dcd7cb914deddd2a6bb82dfa5dfd34f26121d4181948b18",
                 "sha256:66156b0172282a11de55b2ea3ab96fe9b74c28277d95b90b29d4c9f4bc1365d9",
-                "sha256:938489ef9b72974fa8c69e50ca8868dd8e5757e8756227128298d119816bb892"
+                "sha256:938489ef9b72974fa8c69e50ca8868dd8e5757e8756227128298d119816bb892",
+                "sha256:c135968c730ea4a97e840d99659141740baba615846e7a5911930daa9532fc08"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0.0"
         },
         "pyroll-zouhar-contact": {
             "hashes": [
                 "sha256:1462dfdbf64dcb2e8aec74d1a0bd58d7c3b737c5c7822b97e9cfb21397f128fa",
+                "sha256:15464bbf8bced28101185e75f489f331ac718f2b854169557c41621691d01a4a",
+                "sha256:68a0c4e9dc122104e7a3217fe047ebd08f461bdddabae30da4efa1dc5a63a198",
                 "sha256:bf460d172e30f112f45349371397e0658cc235196338eb42a5adee75168a0696"
             ],
+            "markers": "python_version >= '3.9'",
             "version": "==2.0"
         },
         "pyrsistent": {
