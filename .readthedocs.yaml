@@ -15,7 +15,7 @@ build:
       - pip install pipenv
       - pipenv install --system
     pre_build:
-      - pipenv run tasks
+      - python -m pytask
 
       # Build documentation in the docs/ directory with Sphinx
 sphinx:
