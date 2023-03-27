@@ -26,4 +26,5 @@ assumptions
 profiles
 units/index
 plugins
+config
 ```

@@ -94,7 +94,8 @@ The content of the default config file is as follows:
 plugins = [
 ]
 
-[pyroll.core.config]
+# set config values of a respective package
+[pyroll.core]
 ROLL_PASS_AUTO_ROTATION = true
 GROOVE_PADDING = 0.2
 DEFAULT_MAX_ITERATION_COUNT = 100
