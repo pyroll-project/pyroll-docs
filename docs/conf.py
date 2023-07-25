@@ -27,7 +27,7 @@ copyright = '2022, The PyRolL Project'
 author = 'Max Weiner, Christoph Renzing, Matthias Schmidtchen'
 
 # The full version, including alpha/beta/rc tags
-release = '2.0.0'
+release = '2.0.3'
 
 # -- General configuration ---------------------------------------------------
 
