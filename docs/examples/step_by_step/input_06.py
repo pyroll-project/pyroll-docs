@@ -23,6 +23,7 @@ sequence = pr.PassSequence([
             ),
             nominal_radius=100e-3,
             rotational_frequency=1,
+            temperature=293.1,
         ),
         gap=1e-3,
     ),
