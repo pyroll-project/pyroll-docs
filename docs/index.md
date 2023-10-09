@@ -65,6 +65,7 @@ extensions/index
 plugins/index
 basic/index
 recommendations
+setup/index
 examples/index
 troubleshooting
 ```
