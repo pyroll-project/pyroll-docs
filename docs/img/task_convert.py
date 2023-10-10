@@ -41,7 +41,7 @@ for f in map(Path, [
         for p in produces.values():
             res = run(
                 [
-                    "inkscape", "-d", "600", "-o", str(p), str(depends_on)
+                    "inkscape", "-D", "-d", "600", "-o", str(p), str(depends_on)
                 ]
             )
             res.check_returncode()
