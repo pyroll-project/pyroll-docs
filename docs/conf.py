@@ -37,7 +37,7 @@ release = '2.0.3'
 extensions = [
     "readthedocs_ext.readthedocs",
     # "myst_parser",
-    'sphinx_copybutton'
+    "sphinx_copybutton",
     "myst_nb",
     "sphinx.ext.autodoc",
     "sphinx.ext.intersphinx",
