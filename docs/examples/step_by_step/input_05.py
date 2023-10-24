@@ -1,7 +1,7 @@
 import pyroll.core as pr
 import pyroll.wusatowski_spreading
 import pyroll.freiberg_flow_stress
-import pyroll.hensel_power_and_labour
+import pyroll.lippmann_mahrenholz_force_torque
 import pyroll.zouhar_contact
 
 in_profile = pr.Profile.round(

@@ -64,6 +64,13 @@
       "description": "Provides the roll force and roll torque empirical approach by A. Hensel."
     },
     {
+      "name": "pyroll-lippmann-mahrenholz-force-torque",
+      "docs": "https://github.com/pyroll-project/pyroll-lippmann-mahrenholz-force-torque/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-lippmann-mahrenholz-force-torque",
+      "pypi": "https://pypi.org/project/pyroll-lippmann-mahrenholz-force-torque",
+      "description": "Provides the roll force and roll torque calculation by Lippmann and Mahrenholz."
+    },
+    {
       "name": "pyroll-freiberg-flow-stress",
       "docs": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress/blob/main/docs/index.md",
       "source": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress",

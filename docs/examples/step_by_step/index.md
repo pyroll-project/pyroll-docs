@@ -195,13 +195,13 @@ are now different due to the strain applied in the roll pass.
 ## Adding Influence of Friction and Shear
 
 :::{seealso}
-[Hensel Plugin Details](../../plugins/index.md#pyroll-hensel-power-and-labour)
+[Lippmann-Mahrenholz Plugin Details](../../plugins/index.md#pyroll-lippmann-mahrenholz)
 :::
 
 Currently, the simulation does not respect any influences of process kinetics, friction and shear aside from pure
 equivalent strain rate in the flow stress.
 The exact consideration of those is quite complicated and high in computational effort.
-But there are empirical approaches for approximation as the one by Hensel and coworkers.
+But there are simplified analytical solutions to that as the one by Lippmann and Mahrenholz.
 We can include these considerations by importing the respective module.
 
 ```{literalinclude} input_04.py
@@ -209,9 +209,7 @@ We can include these considerations by importing the respective module.
     :caption: "File: [`input_04.py`](input_04.py)"
 ```
 
-If you run the simulation again, you will notice that roll force and roll torque changed and additional empirical
-coefficients like the rolling efficiency and the lever arm coefficient appear.
-These are used by the model to approximately take friction and shear into account.
+If you run the simulation again, you will notice that roll force and roll torque changed to higher values.
 
 ## Adding More Precise Contact Areas
 
