@@ -261,7 +261,7 @@ So let us add a second roll pass with a round groove of 7 mm diameter.
 
 ```{literalinclude} input_07.py
     :emphasize-lines: 29-40
-    :caption: "File: [`input_02.py`](input_02.py)"
+    :caption: "File: [`input_07.py`](input_07.py)"
 ```
 
 If you run the simulation again, you will notice that the second roll pass now appears in the report and the outgoing profile of the whole sequence is taken as the one of the second pass.
@@ -275,7 +275,7 @@ This can be described by a transport unit, here assumed with a duration of 1 s.
 
 ```{literalinclude} input_08.py
     :emphasize-lines: 29-31
-    :caption: "File: [`input_02.py`](input_02.py)"
+    :caption: "File: [`input_08.py`](input_08.py)"
 ```
 
 If you run the simulation again, you will notice that the strain is reset to 0 in the transport and the workpiece will cool down a bit.
