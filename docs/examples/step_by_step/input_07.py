@@ -10,7 +10,7 @@ in_profile = pr.Profile.round(
     material="S355J2",
     temperature=1000 + 273.15,
     density=7.5e3,
-    thermal_capacity=465,
+    specific_heat_capacity=465,
 )
 
 sequence = pr.PassSequence([

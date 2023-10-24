@@ -240,7 +240,7 @@ The last model we want to add for now is the calculation of temperature change d
 the roll contact.
 Therefore, we import the `pyroll.integral_thermal` module, which gives an integral heat flow and generation balance in
 the roll pass.
-We must provide the density and the thermal capacity (specific heat capacity) of the workpiece material to be able to
+We must provide the density and the specific heat capacity of the workpiece material to be able to
 use this plugin.
 Additionally, we may change the mean surface temperature of the roll as shown.
 

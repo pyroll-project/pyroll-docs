@@ -40,7 +40,7 @@ in_profile = pr.Profile.square(
     strain=0,
     material="C45",
     density=7.8e3,
-    thermal_capacity=690,
+    specific_heat_capacity=690,
 )
 
 # mean roll radii
