@@ -16,7 +16,7 @@ PyRolL Benchmark Repository <https://github.com/pyroll-project/pyroll-pub1-bench
 Example Notebooks on Binder <https://mybinder.org/v2/gh/pyroll-project/pyroll-examples/HEAD>
 ```
 
-If you are a technologist, engineer or anyone who "just" wants to use PyRolL and has some basic questions you should follow one of the following links to get started.
+PyRolL basic examples of published rolling schedules can be found follwing the respective links
 
 ```{toctree}
 technological_examples_for_technologist/thinking_abstract
