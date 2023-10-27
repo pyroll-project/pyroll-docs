@@ -15,10 +15,3 @@ extracting_values
 PyRolL Benchmark Repository <https://github.com/pyroll-project/pyroll-pub1-benchmark>
 Example Notebooks on Binder <https://mybinder.org/v2/gh/pyroll-project/pyroll-examples/HEAD>
 ```
-
-PyRolL basic examples of published rolling schedules can be found follwing the respective links
-
-```{toctree}
-technological_examples_for_technologist/thinking_abstract
-technological_examples_for_technologist/semi_continous_rolling_plant_imf
-```
