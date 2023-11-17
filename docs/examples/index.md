@@ -12,6 +12,6 @@ General PyRolL usage examples can be found following the respective links:
 basic
 step_by_step/index
 roll_pass_examples/index
-PyRolL Benchmark Repository <https://github.com/pyroll-project/pyroll-pub1-benchmark>
+Example Notebooks Repository <https://github.com/pyroll-project/pyroll-examples>
 Example Notebooks on Binder <https://mybinder.org/v2/gh/pyroll-project/pyroll-examples/HEAD>
 ```
