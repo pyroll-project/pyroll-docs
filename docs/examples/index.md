@@ -11,7 +11,7 @@ General PyRolL usage examples can be found following the respective links:
 ```{toctree}
 basic
 step_by_step/index
-extracting_values
+roll_pass_examples/index
 PyRolL Benchmark Repository <https://github.com/pyroll-project/pyroll-pub1-benchmark>
 Example Notebooks on Binder <https://mybinder.org/v2/gh/pyroll-project/pyroll-examples/HEAD>
 ```

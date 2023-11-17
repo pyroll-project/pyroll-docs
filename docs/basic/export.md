@@ -11,10 +11,6 @@ The `pyroll-export` package provide several routines for exporting the data in P
 ```
 
 ```{eval-rst}
-.. autofunction:: pyroll.export.to_toml
-```
-
-```{eval-rst}
 .. autofunction:: pyroll.export.to_yaml
 ```
 
