@@ -1,6 +1,6 @@
 # Data Export
 
-The `pyroll-export` package provide several routines for exporting the data in PyRolL's object structure to well known data formats and objects.
+The `pyroll-export` package provides several routines for exporting the data in PyRolL's object structure to well known data formats and objects.
 
 ```{eval-rst}
 .. autofunction:: pyroll.export.to_dict

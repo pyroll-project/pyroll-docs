@@ -21,7 +21,7 @@ Transport(
 
 The hook {py:attr}`Transport.duration` is the most important property of a transport.
 It defines the temporal extent of the transport.
-An alternative way of defining the extent is a combination of the spacial extent {py:attr}`Transport.length` and the material flow velocity.
+An alternative way of defining the extent is a combination of the spatial extent {py:attr}`Transport.length` and the material flow velocity.
 
 ```python
 Transport(
@@ -31,7 +31,7 @@ Transport(
 )
 ```
 
-However, this approach may not be appropriate for all transports, as the velocity may not be constant or the spacial extent may be meaningless.
+However, this approach may not be appropriate for all transports, as the velocity may not be constant or the spatial extent may be meaningless.
 Therefore, all models for transport are recommended to be defined at the timescale and independent of the length scale, if possible.
 
 ```{eval-rst} 

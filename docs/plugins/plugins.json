@@ -72,7 +72,7 @@
     },
     {
       "name": "pyroll-freiberg-flow-stress",
-      "docs": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress/blob/main/docs/index.md",
+      "docs": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress/blob/main/docs/docs.pdf",
       "source": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress",
       "pypi": "https://pypi.org/project/pyroll-freiberg-flow-stress",
       "description": "Provides the Freiberg flow stress approach and a material database."
