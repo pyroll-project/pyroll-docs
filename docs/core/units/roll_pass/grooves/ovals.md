@@ -140,6 +140,6 @@ $\delta$ is typically one or two degree larger than 90° for wear reasons.
 $r_3$ is much larger than the other radii.
 
 ```{eval-rst} 
-.. autoclass:: GothicGroove
+.. autoclass:: UpsetOvalGroove
     :members:
 ```

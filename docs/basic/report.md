@@ -35,7 +35,7 @@ Currently, four implementations of this hook are predefined.
 :unit_plots_display: displays plots or other graphical presentations of the unit defined by the `unit_plot` hook
 :sequence_units: displays the units a {py:class}`PassSequence` consists of sequentially
 
-Anew new implementation can be defined as follows.
+A new implementation can be defined as follows.
 
 ```python
 import sys

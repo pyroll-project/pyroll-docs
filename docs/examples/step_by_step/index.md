@@ -91,7 +91,7 @@ A constant flow stress of 100 MPa is given to the profile to enable basic roll f
 
 Now, the pass sequence is defined, although it consists for now of only one roll pass.
 The pass sequence is an instance of the class {py:class}`PassSequence`.
-It's only argument is usually the list of roll passes and transports it shall consist of.
+Its only argument is usually the list of roll passes and transports it shall consist of.
 For now, were are only adding one roll pass, nevertheless we need the pass sequence instance.
 
 ```{literalinclude} input_01.py
