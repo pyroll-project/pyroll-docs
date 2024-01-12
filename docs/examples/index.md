@@ -9,9 +9,11 @@ If you have some material you would like to be listed here, do not hesitate to c
 General PyRolL usage examples can be found following the respective links:
 
 ```{toctree}
-basic
+pyroll-examples/Basic_Usage_Of_PyRolL.ipynb
 step_by_step/index
 roll_pass_examples/index
+pyroll-examples/Interpolating_Flow_Stress.ipynb
+pyroll-examples/Interpolating_Flow_Stress_Lambdas.ipynb
 Example Notebooks Repository <https://github.com/pyroll-project/pyroll-examples>
 Example Notebooks on Binder <https://mybinder.org/v2/gh/pyroll-project/pyroll-examples/HEAD>
 ```
