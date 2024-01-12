@@ -10,6 +10,10 @@ and extend the model set available to describe the process.
 # Background and Purpose
 
 To the experience of the authors, the field of metal forming simulation is currently dominated by handcrafted, specialized and monolithic or commercial software tools.
+Groove rolling is a class of metal forming processes, where a bar of large cross-section (typically coming from casting or previous rolling processes) is rolled down to smaller cross-sections within a number of passes.
+The shape of the cross-section is determined by the shape of the roll surface, milled into the roll barrel, known as the groove or calibre.
+The products are commonly known as long products such as wire, bars or rods, because their length is usually much larger than their width and height.
+The passes can be directly coupled (multiple stands are grabbing the workpiece at the same time), called a continuous or "conti" rolling line, or, one pass is performed after each other, called reversing rolling, because the direction of rolling is typically reversed to avoid long transports of the workpiece.
 There is a large variety of modelling approaches for groove rolling processes published in scientific literature within the last century, but often not available as software implementation to the public.
 
 Groove rolling is a rather complex process, one has to deal with mechanical loads, material flow, heat flow and generation, microstructure evolution and others.
@@ -25,6 +29,7 @@ PyRolL can use them as a subroutine if an appropriate interface plugin is availa
 
 The PyRolL project as a whole aims to provide a flexible software basis and a growing collection of model packages for the distinct aspects of groove rolling.
 With this, a rolling engineer can:
+
 - exchange the used models
 - choose the ones that fit best to his conditions or those for which he has data available
 - examine differences in their predictions
@@ -32,6 +37,25 @@ With this, a rolling engineer can:
 - identify possible pit holes and sources of errors
 - design a new process or optimize an exising one
 - lower energy consumption and production costs.
+ 
+A typical rolling simulation will need the following inputs:
+
+- shape, temperature and material data of the workpiece put in the first pass
+- geometry of roll passes
+  - groove shapes
+  - roll diameter
+  - roll gap (distance between roll barrels)
+- kinetics of roll passes, usually by means of the rolls' rotational frequencies
+- plant geometry, distances between rolling stands
+- elastic properties of the rolling stands and rolls, if desired.
+
+Classic values of interest from a rolling simulation include:
+
+- roll forces and torques to determine if the stand withstands the forces and the engines are powerful enough
+- filling of the grooves, to:
+  - ensure full-filling in the last pass to obtain desired cross-section shape
+  - avoid over-filling in the other stands to prevent surface defects
+- temperature evolution of the workpiece in conjunction with microstructure evolution to obtain desired material properties.
 
 PyRolL's implementation in Python leverages the full power of Python's scientific community and package toolbox like [numpy](https://numpy.org), [scipy](https://scipy.org), [pandas](https://pandas.pydata.org), [matplotlib](https://matplotlib.org) and [Jupyter](https://jupyter.org) for the analysis and post-processing of the simulation results.
 PyRolL must not be understood as a click'n'run tool for generation of colorful images, but as a toolbox for an engineer or scientist, who has basic understanding of rolling theory and materials science, as well as basic skills in programming.
