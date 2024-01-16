@@ -84,7 +84,7 @@ Read [here](basic/index) for further information on the basic configuration.
 ## Where to Get Started
 
 There is a [collection of examples](examples/index.md) to ease the start into the usage of PyRolL.
-Especially for absolute beginners, it is recommended to start with the [basic example](examples/pyroll-examples/Basic_Usage_Of_PyRolL.html).
+Especially for absolute beginners, it is recommended to start with the [basic example](examples/pyroll-examples/Basic_Usage_Of_PyRolL.ipynb).
 
 After following the first examples, you shall read the [recommendations](recommendations.md).
 
