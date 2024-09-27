@@ -38,4 +38,4 @@ jobs:
         remote-user: hosting195687
         private-ssh-key: ${{ secrets.HOSTING_PRIVATE_KEY }}
         source-path: .build/
-        destination-path: ~/pyroll.org/httpdocs/
+        destination-path: /pyroll.org/httpdocs/
