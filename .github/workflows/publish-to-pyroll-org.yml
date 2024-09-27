@@ -1,0 +1,35 @@
+on: push
+name: Publish Website
+jobs:
+  web-deploy:
+    name: Deploy Website Every Commit
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+      with:
+        ref: pyroll.org
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.12
+        cache: "pipenv"
+
+    - name: Install Python Environment via Pipenv
+      uses: tiagovrtr/actions-pipenv@v1
+
+    - name: Run Build Tasks
+      run: pipenv run tasks
+
+    - name: Build Sphinx Docs
+      run: pipenv run sphinx
+      continue-on-error: true
+
+    - name: Publish Files
+      uses: SamKirkland/web-deploy@v1
+      with:
+        target-server: pyroll.org
+        remote-user: hosting195687
+        private-ssh-key: ${{ secrets.HOSTING_PRIVATE_KEY }}
+        destination-path: ~/pyroll.org/httpdocs/
