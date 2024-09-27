@@ -18,6 +18,8 @@ jobs:
 
     - name: Install Python Environment via Pipenv
       uses: tiagovrtr/actions-pipenv@v1
+      with:
+        pipenv-version: 2024.0.3
 
     - name: Run Build Tasks
       run: pipenv run tasks
