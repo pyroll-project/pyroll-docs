@@ -16,9 +16,7 @@ jobs:
         python-version: 3.12
 
     - name: Setup Inkscape
-      uses: actions/apt-get-install-action@v2
-      with:
-        pkg: inkscape
+      run: sudo apt-get install inkscape
 
     - name: Install Pipenv
       run: pip install pipenv
