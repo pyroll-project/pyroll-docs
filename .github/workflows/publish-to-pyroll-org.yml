@@ -16,7 +16,7 @@ jobs:
         python-version: 3.12
 
     - name: Install APT Packages
-      run: sudo apt-get install inkscape rsync
+      run: sudo apt-get install inkscape
 
     - name: Install Pipenv
       run: pip install pipenv
@@ -32,10 +32,9 @@ jobs:
       continue-on-error: true
 
     - name: Publish Files
-      uses: SamKirkland/web-deploy@v1
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        target-server: pyroll.org
-        remote-user: hosting195687
-        private-ssh-key: ${{ secrets.HOSTING_PRIVATE_KEY }}
-        source-path: .build/
-        destination-path: /pyroll.org/httpdocs/
+        server: pyroll.org
+        username: githubactions
+        password: ${{ secrets.FTP_PASSWORD }}
+        local_dir: ./build
