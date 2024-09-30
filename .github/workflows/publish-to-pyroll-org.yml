@@ -15,8 +15,8 @@ jobs:
       with:
         python-version: 3.12
 
-    - name: Setup Inkscape
-      run: sudo apt-get install inkscape
+    - name: Install APT Packages
+      run: sudo apt-get install inkscape rsync
 
     - name: Install Pipenv
       run: pip install pipenv
