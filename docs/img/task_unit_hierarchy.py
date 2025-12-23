@@ -6,9 +6,9 @@ from schemdraw import Drawing
 from schemdraw.flow import Box, Arrow, Line, Wire
 
 
-@pytask.mark.task()
-@pytask.mark.produces(f"unit_hierarchy.{e}" for e in ["png", "pdf", "svg"])
-def task_unit_hierarchy(produces: dict[Any, Path]):
+
+
+def task_unit_hierarchy(produces: dict[Any, Path] = [f"unit_hierarchy.{e}" for e in ["png", "pdf", "svg"]]):
     d = Drawing()
 
     d.add(
@@ -87,5 +87,5 @@ def task_unit_hierarchy(produces: dict[Any, Path]):
         Wire(shape="-|", arrow="-o").at(disk_element_unit.E).to(disk_element.S).label("uses")
     )
 
-    for f in produces.values():
+    for f in produces:
         d.save(f.__str__(), dpi=600)
