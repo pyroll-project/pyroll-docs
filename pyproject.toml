@@ -1,7 +1,7 @@
 [project]
-name = "your-project-name"
-version = "0.1.0"
-description = "Add your description here"
+name = "pyroll-docs"
+version = "3.1.0"
+description = "Documentation for PyRolL Project"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -23,7 +23,4 @@ dependencies = [
 [project.scripts]
 tasks = "pytask:main"
 sphinx = "sphinx:main"
-
-[tool.uv]
-dev-dependencies = []
 
