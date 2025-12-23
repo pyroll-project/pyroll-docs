@@ -6,8 +6,14 @@
 Transport are a multipurpose unit.
 They can represent almost every processing step, which is characterized by negligible deformation but by thermal flows or microstructure evolution.
 The most used application is the cooling in the clearances between every roll pass.
-But, also furnaces or cooling ranges can be described by transport units.
-In future, there may be dedicated specialized unit types to represent such aggregates.
+Further usages can be for dedicated heating or cooling operations these can be read here:
+
+Read the following sections for detailed information on those.
+
+```{toctree}
+cooling_pipe
+```
+
 Transports are represented by the {py:class}`Transport` class.
 
 Create a {py:class}`Transport` object as follows:
