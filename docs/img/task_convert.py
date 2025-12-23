@@ -1,8 +1,5 @@
-from subprocess import run
-from typing import Any
-
-import pytask
 from pathlib import Path
+from subprocess import run
 
 THIS_DIR = Path(__file__).parent
 
@@ -10,19 +7,14 @@ for f in THIS_DIR.glob("*.dxf"):
     fpdf = f.with_suffix(".pdf")
 
 
-    @pytask.mark.task(id=f.stem)
-    @pytask.mark.skipif(not fpdf.exists(), reason="printed PDF does not exist")
-    @pytask.mark.depends_on(fpdf)
-    @pytask.mark.produces([f.with_suffix(s) for s in [".svg", ".png"]])
-    def task_convert_dxfs(depends_on: Path, produces: dict[Any, Path]):
-        for p in produces.values():
+    def task_convert_dxfs(depends_on=fpdf, produces=[f.with_suffix(s) for s in [".svg", ".png"]]):
+        for p in produces:
             res = run(
                 [
                     "inkscape", "-d", "600", "-o", str(p), str(depends_on)
                 ]
             )
             res.check_returncode()
-
 
 for f in map(Path, [
     "disk_element.svg",
@@ -34,11 +26,9 @@ for f in map(Path, [
     "pyroll-logo.svg",
     "unit.svg",
 ]):
-    @pytask.mark.task(id=f.stem)
-    @pytask.mark.depends_on(f)
-    @pytask.mark.produces([f.with_suffix(s) for s in [".pdf", ".png"]])
-    def task_convert_svg(depends_on: Path, produces: dict[Any, Path]):
-        for p in produces.values():
+
+    def task_convert_svg(depends_on=f, produces=[f.with_suffix(s) for s in [".pdf", ".png"]]):
+        for p in produces:
             res = run(
                 [
                     "inkscape", "-D", "-d", "600", "-o", str(p), str(depends_on)
