@@ -14,8 +14,8 @@ build:
     - inkscape
   jobs:
     post_create_environment:
-      - pip install pipenv
-      - pipenv install --system
+      - pip install uv
+      - uv sync
     pre_build:
       - python -m pytask
 
