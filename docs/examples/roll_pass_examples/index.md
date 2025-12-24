@@ -4,5 +4,6 @@ The following examples feature published roll schedules for readers and users to
 It is assumed, that the working PyRolL package is the `pyroll-basic` (see  [here](https://pyroll.readthedocs.io/en/latest/examples/basic.html#) for more info).
 
 ```{toctree}
-konti
+imf_semi_conti
+roll_pass_design_stand_velocities
 ```

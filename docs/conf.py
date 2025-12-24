@@ -118,9 +118,12 @@ def rstjinja(app, docname, source):
     """
     Render our pages as a jinja template for fancy templating goodness.
     """
+    if docname not in app.config.jinja_contexts:
+        return
     # Make sure we're outputting HTML
     if app.builder.format != 'html':
         return
+
     src = source[0]
     rendered = app.builder.templates.render_string(
         src, app.config.jinja_contexts.get(docname, {})

@@ -3,19 +3,16 @@
 ```{py:currentmodule} pyroll.core
 ```
 
-Transport are a multipurpose unit.
+Transport is a multipurpose unit.
 They can represent almost every processing step, which is characterized by negligible deformation but by thermal flows or microstructure evolution.
-The most used application is the cooling in the clearances between every roll pass.
-Further usages can be for dedicated heating or cooling operations these can be read here:
-
-Read the following sections for detailed information on those.
+The most used application is the cooling in the clearances between every roll pass further, the {py:class}`CoolingPipe` class is derived from a {py:class}`Transport` being used to model the respective unit inside a water box.
 
 ```{toctree}
 cooling_pipe
 ```
 
+But also furnaces or other cooling ranges can be described by transport units.
 Transports are represented by the {py:class}`Transport` class.
-
 Create a {py:class}`Transport` object as follows:
 
 ```python
@@ -25,7 +22,7 @@ Transport(
 )
 ```
 
-The hook {py:attr}`Transport.duration` is the most important property of a transport.
+The hook {py:attr}`Transport.duration` is the most important property of transport.
 It defines the temporal extent of the transport.
 An alternative way of defining the extent is a combination of the spatial extent {py:attr}`Transport.length` and the material flow velocity.
 

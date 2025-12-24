@@ -22,8 +22,8 @@ Different Radii at a work roll.
 :::
 
 The most important radius is the so-called working radius. 
-This radius is defined is the corresponding radius for the [equivalent flat pass method](core/units/basic_rolling_theory.md).
-Further the nominal radius is defined as the outer radius at the barrel surface. 
+This radius is defined is the corresponding radius for the [equivalent flat pass method](/core/basic_rolling_theory.md).
+Further, the nominal radius is defined as the outer radius at the barrel surface. 
 
 
 ```{eval-rst} 

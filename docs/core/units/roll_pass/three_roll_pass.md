@@ -21,7 +21,7 @@ $$
 w_{i=1} = \frac{w_\mathrm{u}}{\cos 30°} + s \tan 30°
 $$
 
-:::{figure-md} fig:directions-three-roll
+:::{figure-md} fig:demo-directions-three-roll
 :align: center
 
 ![Three-Roll Pass Directions](/img/directions-three-roll.svg)

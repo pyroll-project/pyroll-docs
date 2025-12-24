@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pyroll-basic = "~=2.0"
+pyroll-basic = "~=3.0"
 Sphinx = "~=7.0"
 sphinx-copybutton = "~=0.5"
 myst-parser = "~=2.0"

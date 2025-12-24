@@ -175,9 +175,9 @@ def saito_model_for_working_radius(self: pr.RollPass.Roll):
 ```
 
 Now PyRolL uses the working diameter model published by Lee et al.
-The complete evaluation covering this analysis can be found in this ![notebook](/docs/examples/pyroll-examples/working-diameter-models.ipynb).
+The complete evaluation covering this analysis can be found in the respective notebook in the examples section.
 The resulting analysis can be summarized in the below figure: 
 
-![Working Diameter Analysis](/docs/img/comparison_working_diameter_models.svg)
+![Working Diameter Analysis](/img/comparison_working_diameter_models.svg)
 
 Here one can see, that nevertheless the chosen equivalent rectangle method, a noteable difference in the resulting velocities can not be seen.

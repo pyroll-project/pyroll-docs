@@ -1,10 +1,9 @@
 # The Base Unit Class
 
+```
 ```{py:currentmodule} pyroll.core
 ```
-
-```{py:currentclass} pyroll.core.Unit
-```
+```{py:currentmodule} pyroll.core.Unit
 
 ![illustration of the unit concept](/img/unit.svg)
 
