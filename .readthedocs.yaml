@@ -17,7 +17,7 @@ build:
       - pip install uv
       - uv sync
     pre_build:
-      - python -m pytask
+      - uv run pytask
 
       # Build documentation in the docs/ directory with Sphinx
 sphinx:
