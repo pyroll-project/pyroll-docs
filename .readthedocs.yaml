@@ -14,10 +14,10 @@ build:
     - inkscape
   jobs:
     post_create_environment:
-      - pip install uv
-      - uv sync
+      - pip install pipenv
+      - pipenv install --system
     pre_build:
-      - uv run pytask
+      - python -m pytask
 
       # Build documentation in the docs/ directory with Sphinx
 sphinx:
