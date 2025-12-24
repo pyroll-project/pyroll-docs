@@ -35,7 +35,7 @@ release = '3.1.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    "myst_parser",  # Für reine Markdown-Dateien
+   # "myst_parser",
     "sphinx_copybutton",
     "myst_nb",  # Für Jupyter Notebooks (.ipynb)
     "sphinx.ext.autodoc",
