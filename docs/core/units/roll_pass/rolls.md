@@ -24,7 +24,26 @@ Different Radii at a work roll.
 The most important radius is the so-called working radius. 
 This radius is defined is the corresponding radius for the [equivalent flat pass method](core/units/basic_rolling_theory.md).
 Further the nominal radius is defined as the outer radius at the barrel surface. 
+The default configuration of the roll object is a `FlatGroove`. 
+This makes it possible to define a non grooved roll as follows:
 
+```python
+Roll(
+            barrel_width=350e-3,
+            nominal_radius=160e-3,
+            rotational_frequency=1,
+        )
+```
+
+Further, a groove object can be used to represent grooved roll passes:
+
+```python
+Roll(
+            groove=CircularOvalGroove(depth=8e-3, r1=6e-3, r2=40e-3),
+            nominal_radius=160e-3,
+            rotational_frequency=1
+        ),
+```
 
 ```{eval-rst} 
 .. autoclass:: Roll

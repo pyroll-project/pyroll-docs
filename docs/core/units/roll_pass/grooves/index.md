@@ -14,5 +14,6 @@ boxes
 rounds
 ovals
 diamonds
+flat
 spline
 ```
