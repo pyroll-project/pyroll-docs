@@ -10,7 +10,7 @@ Always pay attention when simulating three-roll passes, that appropriate models 
 
 The main difference is that the dimensions of a three-roll pass are not right-angled, due to the 3-fold symmetry.
 As the figure shows, the width and height are under an angle of odd multiples of 60°.
-The caveat is, that width and height can not directly be measured here, but only their half.
+The caveat is, that width and height cannot directly be measured here, but only their half.
 This measure is implemented as hook functions for profiles featuring the type `"3fold"` (see [Profile Classifiers](../../profiles.md#profile-classifiers) for further information).
 
 The width of ideal filling of the roll pass is here also dependent on the roll gap, as it is not for two-roll passes.

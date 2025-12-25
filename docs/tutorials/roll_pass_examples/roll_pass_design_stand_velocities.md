@@ -77,7 +77,7 @@ Here PyRolL calculates the single stand velocities based on a finishing speed as
 
 >**_NOTE:_**  The given elongations are not taken into account for calculations regarding the material flow.
 
-## Example and Solve Method usage
+## Example
 
 In the current example we will analyse different working roll radii methods and their influence on the overall calculation results: 
 Therefore we first load the respective modules:
