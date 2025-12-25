@@ -1,6 +1,9 @@
 # Rolling Theory and Basics
 
-PyRolL was build and developed with a clear theoretical concept, however the following section should provide some deeper explanation about basic modeling approaches which are embeded into the software. 
+PyRolL was built and developed with a clear theoretical concept;
+however,
+the following section should provide some deeper explanation about basic modeling approaches
+which are embedded into the software. 
 
 ## Material Flow and Plastomechanical Basics
 
@@ -90,7 +93,7 @@ To solve this task, suitable mapping and direct calculation methods are used for
 For hot groove rolling, three major methods were developed to enable calculation of the material flow inside the grooves.
 PyRolL offers two methods for this topic. 
 First the equivalent rectangle method which is partially implemented in the `pyroll-core` package and also in the `pyroll-lendl-equivalent-method` plugin.
-Another method is the so-called pillar model which is explained in the documentation of the respective `pyroll-pillar-model` plugin.
+Another method is the so-called pillar model explained in the documentation of the respective `pyroll-pillar-model` plugin.
 The most common method used for hot groove rolling is the so-called "equivalent-rectangle" or "equivalent-flat-pass" method.
 It was developed by Siebel (1925) and maps the complex groove roll pass to a simpler flat roll pass.
 
