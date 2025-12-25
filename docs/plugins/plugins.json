@@ -8,13 +8,6 @@
       "description": "Provides Wusatowski's spreading model."
     },
     {
-      "name": "pyroll-integral-thermal",
-      "docs": "https://github.com/pyroll-project/pyroll-integral-thermal/blob/main/docs/docs.md",
-      "source": "https://github.com/pyroll-project/pyroll-integral-thermal",
-      "pypi": "https://pypi.org/project/pyroll-integral-thermal",
-      "description": "Provides an integral approach for thermal modelling."
-    },
-    {
       "name": "pyroll-roux-spreading",
       "docs": "https://github.com/pyroll-project/pyroll-roux-spreading/blob/main/docs/docs.pdf",
       "source": "https://github.com/pyroll-project/pyroll-roux-spreading",
@@ -50,6 +43,27 @@
       "description": "Provides Marini's spreading model."
     },
     {
+      "name": "pyroll-ring-model",
+      "docs": "https://github.com/pyroll-project/pyroll-ring-model/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-ring-model",
+      "pypi": "https://pypi.org/project/pyroll-ring-model",
+      "description": "Provides a basic interface for inhomogeneous modelling with gradients in radial direction (from core to surface)."
+    },
+    {
+      "name": "pyroll-ring-model-thermal",
+      "docs": "https://github.com/pyroll-project/pyroll-ring-model-thermal/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-ring-model-thermal",
+      "pypi": "https://pypi.org/project/pyroll-ring-model-thermal",
+      "description": "Provides thermal model based on the ring model approach."
+    },
+    {
+      "name": "pyroll-integral-thermal",
+      "docs": "https://github.com/pyroll-project/pyroll-integral-thermal/blob/main/docs/docs.md",
+      "source": "https://github.com/pyroll-project/pyroll-integral-thermal",
+      "pypi": "https://pypi.org/project/pyroll-integral-thermal",
+      "description": "Provides an integral approach for thermal modelling."
+    },
+    {
       "name": "pyroll-zouhar-contact",
       "docs": "https://github.com/pyroll-project/pyroll-zouhar-contact/blob/main/docs/docs.pdf",
       "source": "https://github.com/pyroll-project/pyroll-zouhar-contact",
@@ -57,10 +71,10 @@
       "description": "Provides the contact area estimation by Zouhar."
     },
     {
-      "name": "pyroll-hensel-power-and-labour",
-      "docs": "https://github.com/pyroll-project/pyroll-hensel-power-and-labour/blob/main/docs/docs.pdf",
-      "source": "https://github.com/pyroll-project/pyroll-hensel-power-and-labour",
-      "pypi": "https://pypi.org/project/pyroll-hensel-power-and-labour",
+      "name": "pyroll-hensel-force-torque",
+      "docs": "https://github.com/pyroll-project/pyroll-hensel-force-torque/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-hensel-force-torque",
+      "pypi": "https://pypi.org/project/pyroll-hensel-force-torque",
       "description": "Provides the roll force and roll torque empirical approach by A. Hensel."
     },
     {
@@ -71,6 +85,20 @@
       "description": "Provides the roll force and roll torque calculation by Lippmann and Mahrenholz."
     },
     {
+      "name": "pyroll-sims-power-and-labour",
+      "docs": "https://github.com/pyroll-project/pyroll-sims-power-and-labour/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-sims-power-and-labour",
+      "pypi": "https://pypi.org/project/pyroll-sims-power-and-labour",
+      "description": "Provides the power and labour calculations from R.B. Sims."
+    },
+    {
+      "name": "pyroll-karman-force-torque",
+      "docs": "https://github.com/pyroll-project/pyroll-karman-force-torque/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-karman-force-torque",
+      "pypi": "https://pypi.org/project/pyroll-karman-force-torque",
+      "description": "Provides the roll force and roll torque calculation by solving von Karmans differential equation."
+    },
+    {
       "name": "pyroll-freiberg-flow-stress",
       "docs": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress/blob/main/docs/docs.pdf",
       "source": "https://github.com/pyroll-project/pyroll-freiberg-flow-stress",
@@ -78,11 +106,32 @@
       "description": "Provides the Freiberg flow stress approach and a material database."
     },
     {
-      "name": "pyroll-sims-power-and-labour",
-      "docs": "https://github.com/pyroll-project/pyroll-sims-power-and-labour/blob/main/docs/docs.pdf",
-      "source": "https://github.com/pyroll-project/pyroll-sims-power-and-labour",
-      "pypi": "https://pypi.org/project/pyroll-sims-power-and-labour",
-      "description": "Provides the power and labour calculations from R.B. Sims."
+      "name": "pyroll-shida-flow-stress",
+      "docs": "https://github.com/pyroll-project/pyroll-shida-flow-stress/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-shida-flow-stress",
+      "pypi": "https://pypi.org/project/pyroll-shida-flow-stress",
+      "description": "Provides the Shida flow stress model."
+    },
+    {
+      "name": "pyroll-misaka-flow-stress",
+      "docs": "https://github.com/pyroll-project/pyroll-misaka-flow-stress/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-misaka-flow-stress",
+      "pypi": "https://pypi.org/project/pyroll-misaka-flow-stress",
+      "description": "Provides the Misaka flow stress model."
+    },
+    {
+      "name": "pyroll-lee-flow-stress",
+      "docs": "https://github.com/pyroll-project/pyroll-lee-flow-stress/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-lee-flow-stress",
+      "pypi": "https://pypi.org/project/pyroll-lee-flow-stress",
+      "description": "Provides the Lee flow stress model."
+    },
+    {
+      "name": "pyroll-mauk-gottschling-flow-stress",
+      "docs": "https://github.com/pyroll-project/pyroll-mauk-gottschling-flow-stress/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-mauk-gottschling-flow-stress",
+      "pypi": "https://pypi.org/project/pyroll-mauk-gottschling-flow-stress",
+      "description": "Provides the Mauk and Gottschling flow stress model."
     },
     {
       "name": "pyroll-hitchcock-roll-flattening",
@@ -106,20 +155,62 @@
       "description": "Provides the calculation of elastic work roll deformation by matrix method."
     },
     {
-      "name": "pyroll-ring-model",
-      "docs": "https://github.com/pyroll-project/pyroll-ring-model/blob/main/docs/docs.pdf",
-      "source": "https://github.com/pyroll-project/pyroll-ring-model",
-      "pypi": "https://pypi.org/project/pyroll-ring-model",
-      "description": "Provides a basic interface for inhomogeneous modelling with gradients in radial direction (from core to surface)."
+      "name": "pyroll-neutral-point-estimator",
+      "docs": "https://github.com/pyroll-project/pyroll-neutral-point-estimator/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-neutral-point-estimator",
+      "pypi": "https://pypi.org/project/pyroll-neutral-point-estimator",
+      "description": "Provides a collection of neutral point approximations."
     },
     {
-      "name": "pyroll-ring-model-thermal",
-      "docs": "https://github.com/pyroll-project/pyroll-ring-model-thermal/blob/main/docs/docs.pdf",
-      "source": "https://github.com/pyroll-project/pyroll-ring-model-thermal",
-      "pypi": "https://pypi.org/project/pyroll-ring-model-thermal",
-      "description": "Provides thermal model based on the ring model approach."
+      "name": "pyroll-tension-spreading-interaction",
+      "docs": "https://github.com/pyroll-project/pyroll-tension-spreading-interaction/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-tension-spreading-interaction",
+      "pypi": "https://pypi.org/project/pyroll-tension-spreading-interaction",
+      "description": "Provides the empirical model of Dobler to include the effect of interstand tensions."
+    },
+    {
+      "name": "pyroll-pillar-model",
+      "docs": "https://github.com/pyroll-project/pyroll-pillar-model/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-pillar-model",
+      "pypi": "https://pypi.org/project/pyroll-pillar-model",
+      "description": "Provides a descritized analyse of material flow as well as local forming values."
+    },
+    {
+      "name": "pyroll-stationary-thermal-analysis-work-roll",
+      "docs": "https://github.com/pyroll-project/pyroll-stationary-thermal-analysis-work-roll/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-stationary-thermal-analysis-work-roll",
+      "pypi": "https://pypi.org/project/pyroll-stationary-thermal-analysis-work-roll",
+      "description": "Provides a thermal analysis of roll cooling."
+    },
+    {
+      "name": "pyroll-gripping-analysis",
+      "docs": "https://github.com/pyroll-project/pyroll-gripping-analysis/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-gripping-analysis",
+      "pypi": "https://pypi.org/project/pyroll-gripping-analysis",
+      "description": "Provides a gripping analysis by providing a bite-angle."
+    },
+    {
+      "name": "pyroll-elastic-mill-spring",
+      "docs": "https://github.com/pyroll-project/pyroll-elastic-mill-spring/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-elastic-mill-spring",
+      "pypi": "https://pypi.org/project/pyroll-elastic-mill-spring",
+      "description": "Provides the gaugemeter equation for elastic mill feedback."
+    },
+    {
+      "name": "pyroll-jmak-recrystallization",
+      "docs": "https://github.com/pyroll-project/pyroll-jmak-recrystallization/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-jmak-recrystallization",
+      "pypi": "https://pypi.org/project/pyroll-jmak-recrystallization",
+      "description": "Provides change in austenite grain size and strain according to dynamic, metadynamic and static recrystallization.."
     }
   ],
   "unofficial": [
+    {
+      "name": "pyroll-community-notebook",
+      "docs": "https://github.com/pyroll-project/pyroll-community-notebook/blob/main/docs/docs.pdf",
+      "source": "https://github.com/pyroll-project/pyroll-community-notebook",
+      "pypi": "https://pypi.org/project/pyroll-tension-community-notebook",
+      "description": "Provides a notebook styled for PyRolL power users developed by G. Rothenbucher and M.Molter."
+    }
   ]
 }
