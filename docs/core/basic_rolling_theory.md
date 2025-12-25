@@ -1,6 +1,9 @@
 # Rolling Theory and Basics
 
-PyRolL was build and developed with a clear theoretical concept, however the following section should provide some deeper explanation about basic modeling approaches which are embeded into the software. 
+PyRolL was built and developed with a clear theoretical concept;
+however,
+the following section should provide some deeper explanation about basic modeling approaches
+which are embedded into the software. 
 
 ## Material Flow and Plastomechanical Basics
 
@@ -8,57 +11,50 @@ To describe the material flow, the hot groove rolling process is treated as a ma
 Since the mass loss is small in comparison to the total mass of the material, the difference is neglected and the law of mass-preservation is applied.
 This yields that the following equations which are used to describe the global system:
 
-$$
-\begin{align}
-    V_0 &= V_1 \\
-    A_0 \cdot l_0 &= A_1 \cdot l_1 \\
-    h_0 \cdot b_0 \cdot l_0 &= h_1 \cdot b_1 \cdot l_1
-\end{align}
-$$
+
+```{math}
+V_0 &= V_1 \\
+A_0 \cdot l_0 &= A_1 \cdot l_1 \\
+h_0 \cdot b_0 \cdot l_0 &= h_1 \cdot b_1 \cdot l_1
+```
+
 
 Further, the following conditions have to be fulfilled.
 In special cases, the change in width of a profile can be close to zero.
 
-$$
-\begin{align}
-    h_0 &\gg h_1 \\
-    b_0 &\leq b_1 \\
-    l_0 &\ll l_1
-\end{align}
-$$ 
+```{math}
+h_0 &\gg h_1 \\
+b_0 &\leq b_1 \\
+ l_0 &\ll l_1
+```
 
 To further characterize the forming process, relative and absolute characteristic values are used.
 The values used below are the relative draught, spread, and elongation.
 
-$$
-\begin{align}
-    \varepsilon_h &= \frac{h_0 - h_1}{h_0} \\
-    \varepsilon_b &= \frac{b_0 - b_1}{b_0}  \\
-    \varepsilon_l &= \frac{l_0 - l_1}{l_0}
-\end{align}
-$$
+
+```{math}
+\varepsilon_h &= \frac{h_0 - h_1}{h_0} \\
+\varepsilon_b &= \frac{b_0 - b_1}{b_0}  \\
+\varepsilon_l &= \frac{l_0 - l_1}{l_0}
+```
 
 Usage of relative values has the disadvantage that they are only suitable for characterization of single-step forming processes.
 Since groove rolling is often a multistep forming process, the variables spread ($\beta$), elongation ($\lambda$) and draught ($\gamma$) are used.
 These three values are also known as coefficients of draught, spread, and elongation and mark the most important characteristic forming values.
 
-$$
-\begin{align}
-    \gamma &= \frac{h_1}{h_0} \\
-    \beta &= \frac{b_1}{b_0}  \\
-    \lambda &= \frac{l_1}{l_0} = \frac{A_0}{A_1}
-\end{align}
-$$
+```{math}
+\gamma &= \frac{h_1}{h_0} \\
+\beta &= \frac{b_1}{b_0}  \\
+\lambda &= \frac{l_1}{l_0} = \frac{A_0}{A_1}
+```
 
 If the change of shape is related to the current shape, the values yield the so-called natural or logarithmic draught, spread, and elongation.
 
-$$
-\begin{align}
-    \varphi_h &= \ln(\gamma) \\
-    \varphi_b &= \ln(\beta)  \\
-    \varphi_l &= \ln(\lambda)
-\end{align}
-$$
+```{math}
+\varphi_h &= \ln(\gamma) \\
+\varphi_b &= \ln(\beta)  \\
+\varphi_l &= \ln(\lambda)
+```
 
 To complete the description of the material flow, it is necessary to also include the equivalent strain $\varphi$ as well as the strain-rate $\dot{\varphi}$ as those two variables are the most significant of all further submodules used.
 Lee et al. (1999) presented a study where he compared various methods to calculate the strain of the workpiece during rolling.
@@ -97,7 +93,7 @@ To solve this task, suitable mapping and direct calculation methods are used for
 For hot groove rolling, three major methods were developed to enable calculation of the material flow inside the grooves.
 PyRolL offers two methods for this topic. 
 First the equivalent rectangle method which is partially implemented in the `pyroll-core` package and also in the `pyroll-lendl-equivalent-method` plugin.
-Another method is the so-called pillar model which is explained in the documentation of the respective `pyroll-pillar-model` plugin.
+Another method is the so-called pillar model explained in the documentation of the respective `pyroll-pillar-model` plugin.
 The most common method used for hot groove rolling is the so-called "equivalent-rectangle" or "equivalent-flat-pass" method.
 It was developed by Siebel (1925) and maps the complex groove roll pass to a simpler flat roll pass.
 

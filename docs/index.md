@@ -118,6 +118,7 @@ plugins/index
 basic/index
 recommendations
 setup/index
+tutorials/index
 examples/index
 troubleshooting
 ```
