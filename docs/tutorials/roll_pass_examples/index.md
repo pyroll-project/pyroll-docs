@@ -6,4 +6,5 @@ It is assumed, that the working PyRolL package is the `pyroll-basic` (see  [here
 ```{toctree}
 imf_semi_conti
 roll_pass_design_stand_velocities
+split_end_analysis
 ```
